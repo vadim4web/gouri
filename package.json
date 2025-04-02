@@ -1,0 +1,33 @@
+{
+  "name": "gouri",
+  "homepage": "http://vadim4web.github.io/gouri/",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "prettify": "prettier src/**/*.{js,vue,css} --write",
+		"lint": "eslint --fix src/**/*.{js,vue}",
+		"format": "npm run prettify && npm run lint"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "emailjs-com": "^3.2.0",
+    "vue": "^3.5.13",
+    "vue-i18n": "^11.1.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "eslint": "^9.23.0",
+    "eslint-plugin-vue": "^10.0.0",
+    "gh-pages": "^6.3.0",
+    "prettier": "^3.5.3",
+    "sass": "^1.86.1",
+    "vite": "^6.2.0"
+  }
+}
