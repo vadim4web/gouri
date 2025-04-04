@@ -1,7 +1,7 @@
 <template>
-  <header>
-    HEADER
-  </header>
+  <section>
+    TESTIMONIALS
+  </section>
 </template>
 
 <script setup>

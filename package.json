@@ -11,11 +11,12 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "prettify": "prettier src/**/*.{js,vue,css} --write",
-		"lint": "eslint --fix src/**/*.{js,vue}",
-		"format": "npm run prettify && npm run lint"
+    "lint": "eslint --fix src/**/*.{js,vue}",
+    "format": "npm run prettify && npm run lint"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@vueuse/core": "^13.0.0",
     "emailjs-com": "^3.2.0",
     "vue": "^3.5.13",
     "vue-i18n": "^11.1.2"

@@ -1,24 +1,55 @@
+@import '~/assets/css/reset.css';
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --color: #eb0000;
+  --color50: #eb000080;
+  --color-dimmed: #670f0f;
+  --color-light: #ff6161;
+
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  transition: all 333ms;
+  -webkit-transition: all 333ms;
+  -moz-transition: all 333ms;
+  -ms-transition: all 333ms;
+  -o-transition: all 333ms;
+}
+
+.unbounded {
+  font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
 
 #app {
-  /* max-width: 1280px; */
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+}
+
+a:link,
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: var(--color);
+}
+
+a:active {
+  color: var(--color-light);
 }

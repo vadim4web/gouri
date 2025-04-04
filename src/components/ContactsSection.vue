@@ -1,7 +1,7 @@
 <template>
-  <main>
-    MAIN
-  </main>
+  <section id="contact-us">
+    CONTACT US
+  </section>
 </template>
 
 <script setup>
