@@ -84,6 +84,18 @@
       align-self: start;
       justify-self: end;
     }
+
+    @media (orientation: portrait) and (min-width: 768px) {
+      position: relative;
+
+      svg {
+        position: absolute;
+        width: 1.5rem;
+        height: 1.5rem;
+        top: 0.5rem;
+        right: 0.5rem;
+      }
+    }
   }
 }
 </style>

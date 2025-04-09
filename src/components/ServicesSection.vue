@@ -55,8 +55,9 @@ import RequestCall from './RequestCall.vue'
       }
 
 
-      border: 1px solid;
-      border-color: var(--color-light) var(--color-light) white;
+      border-style: solid;
+      border-width: 0 0 2px;
+      border-color: white;
 
       &:first-child {
         border-top-left-radius: 2.5rem;

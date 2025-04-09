@@ -27,6 +27,9 @@
 <style lang="scss">
 .about-section {
   gap: 5rem;
+  position: relative;
+  z-index: 1;
+  background: white;
 
   @media (orientation: landscape) {
     display: grid;
@@ -75,9 +78,21 @@
 
     @media (orientation: portrait) {
       width: 15rem;
-      margin: -5rem auto;
+      margin-inline: auto;
+
+      margin-top: 0;
+      margin-bottom: -5rem;
     }
-  }
+
+   /* @media (orientation: portrait) and (max-width: 767px) {
+      margin-block: -5rem;
+    }
+
+    @media (orientation: portrait) and (min-width: 768px) {
+      margin-top: 0;
+      margin-bottom: -5rem;
+    }*/
+  } 
 
   .about-description {
     text-align: left;

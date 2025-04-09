@@ -98,7 +98,7 @@ const { width, height } = useWindowSize()
 
     h1 {
       font-family: 'Unbounded';
-      font-weight: 400;
+      font-weight: 500;
 
       @media (orientation: portrait) {
         font-size: 2.5rem;
@@ -118,5 +118,4 @@ const { width, height } = useWindowSize()
     }
   }
 }
-
 </style>
