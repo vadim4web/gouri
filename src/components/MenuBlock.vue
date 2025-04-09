@@ -1,5 +1,5 @@
 <template>
-  <header class="header-mobile">
+  <header class="header-mobile" :class="isMenuOpen ? 'bg-white' : ''">
     <logo-component class="header-logo">
       GOURI
     </logo-component>
@@ -45,10 +45,13 @@ const isMenuOpen = ref(false)
 
   width: 100%;
   padding: 1rem 1.5rem;
-
+  height: 5rem;
   font-weight: bold;
-
   position: relative;
+
+  &.bg-white {
+    background: white;
+  }
 
   .menu-toggle {
     border: none;

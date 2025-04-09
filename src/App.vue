@@ -12,12 +12,12 @@ import FooterSection from '~/components/FooterSection.vue'
 
 <template>
   <hero-section />
-	<three-blocks />
+	<!-- <three-blocks />
 	<head-line />
 	<services-section />
 	<about-section />
 	<testimonials-section />
 	<faq-section />
 	<contacts-section />
-	<footer-section />
+	<footer-section /> -->
 </template>

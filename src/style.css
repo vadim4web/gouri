@@ -5,6 +5,9 @@
   --color50: #eb000080;
   --color-dimmed: #670f0f;
   --color-light: #ff6161;
+  --color-gray: #808080;
+  --color-gray50: #80808080;
+  --color-red-gray: #997570;
 
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -13,6 +16,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  font-size: 1.5vmin;
 }
 
 * {
@@ -21,6 +26,12 @@
   -moz-transition: all 333ms;
   -ms-transition: all 333ms;
   -o-transition: all 333ms;
+
+  transition: background 0ms;
+  -webkit-transition: background 0ms;
+  -moz-transition: background 0ms;
+  -ms-transition: background 0ms;
+  -o-transition: background 0ms;
 }
 
 .unbounded {
@@ -39,6 +50,16 @@ body {
 #app {
   margin: 0 auto;
   text-align: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+.pocket {
+  border-bottom-left-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
 }
 
 a:link,

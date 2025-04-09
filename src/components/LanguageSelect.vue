@@ -1,7 +1,7 @@
 <template>
   <div class="language-select">
     <a role="button" :class="locale == 'uk' ? 'selected' : ''" @click="setLocale('uk')">UK</a>
-    <span style="color: #80808080;">|</span>
+    <span style="color: var(--color-gray50);">|</span>
     <a role="button" :class="locale == 'ru' ? 'selected' : ''" @click="setLocale('ru')">RU</a>
   </div>
 </template>
@@ -25,7 +25,7 @@ const setLocale = (lang) => locale.value = lang
   width: 100%;
 
   :not(.selected) {
-    color: #808080;
+    color: var(--color-gray);
   }
 
   a:hover {

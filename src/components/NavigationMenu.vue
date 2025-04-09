@@ -10,7 +10,7 @@
 
     <call-button />
 
-    <symbolic-image style="transform: scale(0.66) translateY(-10svh);" />
+    <symbolic-image style="transform: scale(0.66) translateY(-7.5svh); margin-bottom: -10%;" />
 
     <div class="nav-footer">
       {{ $t('copyright') }} &copy; 2018 - {{ new Date().getFullYear() }} GOURI Agency
@@ -24,19 +24,20 @@ import CallButton from './CallButton.vue'
 import SymbolicImage from './SymbolicImage.vue'
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .navigation-mobile {
   position: absolute;
+  z-index: 10;
   bottom: 0;
   left: 0;
   right: 0;
-  height: calc(100svh - 4.25rem);
+  height: calc(100svh - 5rem);
   width: 100%;
   overflow: hidden;
   transform: translateY(100%);
   background: white;
   display: grid;
-  grid-template-rows: 6fr 2fr 3fr 3fr 3fr;
+  grid-template-rows: 5fr 2fr 2fr 3fr 3fr;
   align-content: center;
   justify-items: center;
 }
@@ -56,9 +57,9 @@ import SymbolicImage from './SymbolicImage.vue'
 .nav-footer {
   background: var(--color-dimmed);
   width: 100%;
-  height: 15svh;
+  height: 100%;
   position: relative;
-  bottom: -0.25rem;
+  bottom: -0.25svh;
   color: white;
   font-weight: 500;
 

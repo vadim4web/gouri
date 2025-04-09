@@ -20,7 +20,7 @@ import CallButton from './CallButton.vue'
 <style lang="scss" scoped>
 .navigation {
   display: grid;
-  grid-template-columns: 6fr 2fr 3.5fr;
+  grid-template-columns: 6.5fr 2fr 3.5fr;
   align-content: center;
   justify-items: center;
 }
