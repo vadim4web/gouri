@@ -18,7 +18,7 @@ import NavigationList from './NavigationList.vue'
   display: grid;
   grid-template-columns: 1fr 3.5fr;
 
-  height: 5rem;
+  height: 5.5rem;
 
   align-content: center;
   align-items: center;

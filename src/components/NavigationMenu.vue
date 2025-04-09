@@ -31,10 +31,10 @@ import SymbolicImage from './SymbolicImage.vue'
   bottom: 0;
   left: 0;
   right: 0;
-  height: calc(100svh - 5rem);
+  height: calc(100dvh - 5rem);
   width: 100%;
   overflow: hidden;
-  transform: translateY(100%);
+  transform: translateY(calc(100vh - 5rem));
   background: white;
   display: grid;
   grid-template-rows: 5fr 2fr 2fr 3fr 3fr;
@@ -59,7 +59,6 @@ import SymbolicImage from './SymbolicImage.vue'
   width: 100%;
   height: 100%;
   position: relative;
-  bottom: -0.25svh;
   color: white;
   font-weight: 500;
 

@@ -45,7 +45,7 @@ const isMenuOpen = ref(false)
 
   width: 100%;
   padding: 1rem 1.5rem;
-  height: 5rem;
+  height: 5.5rem !important;
   font-weight: bold;
   position: relative;
 

@@ -19,9 +19,9 @@
         </p>
         <email-form />
       </div>
-
-      <img src="/images/symbol.png" alt="" class="hero-image">
     </div>
+
+    <img src="/images/symbol.png" alt="" class="hero-image">
   </section>
 </template>
 
@@ -37,22 +37,27 @@ const { width, height } = useWindowSize()
 <style lang="scss">
 .hero {
   background: linear-gradient(180deg, #fff, var(--color-red-gray));
-  height: 90dvh;
+  height: 87.5dvh;
+  position: relative;
 }
 
 .hero-image {
   filter: drop-shadow(0 0 1rem var(--color));
-  height: calc(8vh + 25rem);
   aspect-ratio: 558 / 706;
   object-fit: contain;
   position: absolute;
-
+  
   @media (orientation: landscape) {
-    right: 4rem;
+    height: 50dvh;
+    bottom: 12.5dvh;
+    right: 10rem;
   }
-
+  
   @media (orientation: portrait) {
-    bottom: 0;
+    height: 30dvh;
+    bottom: -11.5dvh;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
@@ -61,21 +66,20 @@ const { width, height } = useWindowSize()
   align-items: center;
   justify-content: center;
   max-width: 63vw;
-
   padding: 0 1rem;
 
   overflow-x: hidden;
 
   @media (orientation: landscape) {
-    height: calc(90dvh - 5rem);
+    height: calc(85dvh - 5.5rem);
     padding: 0 0 0 7.5rem;
   }
 
 
   @media (orientation: portrait) {
-    height: calc(90dvh - 15rem);
+    height: 60dvh;
     flex-direction: column;
-    width: 25rem;
+    width: 30rem;
     margin: 0 auto;
   }
 
@@ -95,11 +99,22 @@ const { width, height } = useWindowSize()
     h1 {
       font-family: 'Unbounded';
       font-weight: 400;
-      font-size: 2.5rem;
+
+      @media (orientation: portrait) {
+        font-size: 2.5rem;
+      }
+
+      @media (orientation: landscape) {
+        font-size: 3.5rem;
+      }
 
       .part1 {
         color: var(--color);
       }
+    }
+
+    p {
+      font-size: 1.25rem;
     }
   }
 }

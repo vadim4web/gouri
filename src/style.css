@@ -1,5 +1,10 @@
 @import '~/assets/css/reset.css';
 
+@font-face {
+  font-family: 'Angry';
+  src: url('public/fonts/Angry.otf') format('opentype');
+}
+
 :root {
   --color: #eb0000;
   --color50: #eb000080;
@@ -17,7 +22,31 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  font-size: 1.5vmin;
+  font-size: 1.66vmin;
+}
+
+@media (orientation: portrait) and (max-width: 539px) {
+  :root {
+    font-size: 2.75vmin;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 540px) {
+  :root {
+    font-size: 1.75vmin;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1023px) {
+  :root {
+    font-size: 2vmin;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+  :root {
+    font-size: 1.66vmin;
+  }
 }
 
 * {

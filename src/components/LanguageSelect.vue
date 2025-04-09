@@ -7,11 +7,23 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { locale } = useI18n()
 
 const setLocale = (lang) => locale.value = lang
+
+onMounted(() => {
+  const browserLang = navigator.language || navigator.userLanguage
+
+  if (
+    browserLang.toLowerCase().startsWith('uk')
+    || browserLang.toLowerCase().startsWith('ua')
+  ) {
+    setLocale('uk')
+  }
+})
 </script>
 
 <style lang="scss" scoped>
