@@ -1,6 +1,22 @@
 <template>
-  <section id="about-us">
-    ABOUT US
+  <section id="about-us" class="about-section pocket">
+    <div class="flex">
+      <h2 class="about-heading">
+        {{ $t('about_heading') }}
+        <img src="/images/arrow-b-r.png" alt="arrow accenting approach">
+      </h2>
+
+      <img src="/images/symbol.png" alt="company approach visualized" class="about-image">
+    </div>
+
+    <div class="about-description">
+      <span
+        v-for="point, index in [1, 2, 3]" :key="index" class="point"
+              :class="index === 2 ? 'emphesize' : ''"
+      >
+        {{ $t(`about_${point}`) }}
+      </span>
+    </div>
   </section>
 </template>
 
@@ -8,6 +24,78 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+.about-section {
+  gap: 5rem;
 
+  @media (orientation: landscape) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding: 7.5rem;
+  }
+
+  @media (orientation: portrait) {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 1rem;
+  }
+
+  .about-heading {
+    font-family: 'Unbounded';
+    text-transform: uppercase;
+    max-width: min-content;
+    text-align: left;
+    position: relative;
+
+    @media (orientation: landscape) {
+      font-size: 3rem;
+    }
+
+    @media (orientation: portrait) {
+      font-size: 4rem;
+    }
+
+
+    img {
+      aspect-ratio: 1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1.5ch;
+    }
+  }
+
+  .about-image {
+    filter: drop-shadow(0 0 1rem var(--color));
+
+    @media (orientation: landscape) {
+      height: 20rem;
+    }
+
+    @media (orientation: portrait) {
+      width: 15rem;
+      margin: -5rem auto;
+    }
+  }
+
+  .about-description {
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+
+    @media (orientation: landscape) {
+      align-self: flex-end;
+      padding-left: 3.25rem;
+    }
+
+    @media (orientation: portrait) {
+
+    }
+
+    .emphesize {
+      font-weight: bolder;
+    }
+  }
+}
 </style>

@@ -21,7 +21,7 @@
       </div>
     </div>
 
-    <img src="/images/symbol.png" alt="" class="hero-image">
+    <img src="/images/symbol.png" alt="company spirit incapsulated in an image" class="hero-image">
   </section>
 </template>
 
@@ -46,13 +46,13 @@ const { width, height } = useWindowSize()
   aspect-ratio: 558 / 706;
   object-fit: contain;
   position: absolute;
-  
+
   @media (orientation: landscape) {
     height: 50dvh;
     bottom: 12.5dvh;
     right: 10rem;
   }
-  
+
   @media (orientation: portrait) {
     height: 30dvh;
     bottom: -11.5dvh;

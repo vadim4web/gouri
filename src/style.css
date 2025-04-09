@@ -5,6 +5,10 @@
   src: url('public/fonts/Angry.otf') format('opentype');
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 :root {
   --color: #eb0000;
   --color50: #eb000080;
@@ -13,6 +17,7 @@
   --color-gray: #808080;
   --color-gray50: #80808080;
   --color-red-gray: #997570;
+  --color-red-gray50: #cfafaf;
 
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
