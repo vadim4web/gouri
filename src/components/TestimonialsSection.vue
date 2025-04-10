@@ -26,7 +26,7 @@ import TestemonialsSlider from './TestemonialsSlider.vue'
 .testemonials-section {
   background: var(--color-dimmed);
   position: relative;
-  transform: scaleY(1.12) translateY(-2.5rem);
+  transform: scaleY(1.0765) translateY(-2.5rem);
   overflow: hidden;
   display: flex;
   flex-direction: column;
