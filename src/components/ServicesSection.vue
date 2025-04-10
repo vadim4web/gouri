@@ -95,7 +95,7 @@ import RequestCall from './RequestCall.vue'
         background: var(--color);
 
         @media (orientation: portrait) {
-          grid-template-rows: 1.5rem 2fr 3fr;
+          grid-template-rows: 1.5rem 1fr 3fr;
         }
 
         .service-description {

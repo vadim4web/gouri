@@ -6,8 +6,8 @@ export default defineConfig(({ command, mode }) => {
 	process.env = { ...process.env, ...loadEnv(mode, process.cwd()) }
 
 	const isProduction = mode === 'production' || command === 'build'
-	const base = isProduction ? '/gouri/' : '/' // ! should be set to '/'
-	// const base = '/' // ! should be set to '/'
+	// const base = isProduction ? '/gouri/' : '/' // ! should be set to '/'
+	const base = '/' // ! should be set to '/'
 
 	return {
     plugins: [

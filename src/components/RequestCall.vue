@@ -1,17 +1,22 @@
 <template>
   <form class="request-call" @submit.prevent="submitForm">
     <label for="phone">
-      <small>{{ $t('services_6__') }}: 123-456-789</small>
+      <small>{{ $t('services_6__') }}: +48-79-333-7695</small>
     </label>
 
     <div class="inputs">
       <input
         id="phone"
         v-model="phone"
-        type="tel"
         name="phone"
-        pattern="[0-9]{3}[0-9]{3}[0-9]{3}"
+        autocomplete="tel"
+        placeholder="+48-79-333-7695"
         required
+        aria-label="phone-input"
+        pattern="^\+48-\d{2}-\d{3}-\d{4}$"
+        @focus="prependCountryCode"
+        @input="restrictPhoneInput"
+        @blur="clearIfOnlyPrepender"
       />
 
       <button type="submit">
@@ -46,10 +51,44 @@ const USER_KEY = import.meta.env.VITE_EMAILJS_USER_KEY
 
 const phone = ref('')
 
+const prependCountryCode = event => {
+  if (!event.target.value.startsWith('+48')) {
+    event.target.value = '+48'
+  }
+}
+
+const restrictPhoneInput = event => {
+  // Remove all non-numeric characters except the plus sign
+  let input = event.target.value.replace(/[^0-9+]/g, '').slice(0, 13)
+
+  // Ensure the input starts with "+380" (or adds it if missing)
+  if (!input.startsWith('+48')) {
+    input = '+48' + input.replace('+48', '')
+  }
+
+  // Format the input as +380 99 999 9999
+  input = input
+    .replace(/^(\+48)(\d{0,2})$/, '$1-$2')
+    .replace(/^(\+48)(\d{0,2})(\d{0,3})$/, '$1-$2-$3')
+    .replace(/^(\+48)(\d{0,2})(\d{0,3})(\d{0,4})$/, '$1-$2-$3-$4')
+
+  event.target.value = input
+  phone.value = input
+}
+
+const clearIfOnlyPrepender = event => {
+  const input = event.target.value
+  if (input === '+48' || input === '+48 ') {
+    event.target.value = ''
+    phone.value = ''
+  }
+}
+
 const submitForm = async () => {
 	const text = `
         Lang: ${locale.value}
         Phone: ${phone.value}
+        Number: ${phone.value.replaceAll('-', '')}
       `
 
 	try {

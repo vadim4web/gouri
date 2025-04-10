@@ -19,6 +19,8 @@
   aspect-ratio: calc(1 / sqrt(2));
   background: white;
 
+  filter: drop-shadow(0 0 1rem var(--color));
+
 
   .symbolic-image {
     position: relative;
