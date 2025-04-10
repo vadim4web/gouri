@@ -69,7 +69,17 @@ const handleClick = ({ target: { parentNode } }) => {
     overflow: hidden;
     padding-inline: 3rem;
 
+    position: relative;
+
     &:not(:last-child) {
+      border-bottom: 1px solid transparent;
+    }
+
+    &:not(:last-child)::after {
+      position: absolute;
+      content: '';
+      width: calc(100% - 7rem);
+      bottom: 0;
       border-bottom: 1px solid var(--color-grey);
     }
 
@@ -120,6 +130,11 @@ const handleClick = ({ target: { parentNode } }) => {
   .faq-answer {
     font-size: 1.5rem;
     transition: height 333ms, padding 333ms;
+  }
+
+  .faq-question,
+  .faq-answer {
+    text-wrap: balance;
   }
 }
 </style>
