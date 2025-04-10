@@ -2,7 +2,11 @@
 
 @font-face {
   font-family: 'Angry';
-  src: url('/fonts/Angry.otf') format('opentype');
+  src: url('/fonts/Angry.woff2') format('woff2'), /* Modern Browsers */
+       url('/fonts/Angry.otf') format('opentype'); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
 }
 
 * {
