@@ -20,7 +20,7 @@
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M10.0742 3.35352L3.16797 11.3535M3.16797 11.3535L10.0742 19.3535M3.16797 11.3535L20.168 11.3535" stroke="white" stroke-width="2"/>
+          <path d="M10.0742 3.35352L3.16797 11.3535M3.16797 11.3535L10.0742 19.3535M3.16797 11.3535L20.168 11.3535" stroke="white" stroke-width="2" />
         </svg>
       </template>
   
@@ -33,7 +33,7 @@
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M13.2617 19.3535L20.168 11.3535M20.168 11.3535L13.2617 3.35351M20.168 11.3535L3.16797 11.3535" stroke="white" stroke-width="2"/>
+          <path d="M13.2617 19.3535L20.168 11.3535M20.168 11.3535L13.2617 3.35351M20.168 11.3535L3.16797 11.3535" stroke="white" stroke-width="2" />
         </svg>
       </template>
       <vueper-slide
@@ -128,17 +128,15 @@ const { width, height } = useWindowSize()
 }
 
 .vueperslides__arrows {
-  @media (orientation: landscape) {
-    transform: translate(2rem, 2.5rem);
+  transform: translate(2rem, 2.5rem);
 
+  @media (orientation: landscape) {
     .vueperslides__arrow--next {
       transform: translate(-75dvw, -2.4rem);
     }
   }
 
   @media (orientation: portrait) {
-    transform: translate(2rem, 2.5rem);
-
     .vueperslides__arrow--next {
       transform: translate(-80dvw, -2.5rem);
     }
@@ -146,12 +144,10 @@ const { width, height } = useWindowSize()
 }
 
 .vueperslides--fixed-height {
-  @media (orientation: landscape) {
-    height: 30rem;
-  }
+  height: 30rem;
+}
 
-  @media (orientation: portrait) {
-    height: 30rem;
-  }
+.vueperslides__track {
+  padding-block: 1px;
 }
 </style>

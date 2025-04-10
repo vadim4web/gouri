@@ -11,7 +11,7 @@
 
     <div class="about-description">
       <span
-        v-for="point, index in [1, 2, 3]" :key="index" class="point"
+        v-for="point, index in 3" :key="index" class="point"
               :class="index === 2 ? 'emphesize' : ''"
       >
         {{ $t(`about_${point}`) }}
@@ -83,16 +83,7 @@
       margin-top: 0;
       margin-bottom: -5rem;
     }
-
-   /* @media (orientation: portrait) and (max-width: 767px) {
-      margin-block: -5rem;
-    }
-
-    @media (orientation: portrait) and (min-width: 768px) {
-      margin-top: 0;
-      margin-bottom: -5rem;
-    }*/
-  } 
+  }
 
   .about-description {
     text-align: left;

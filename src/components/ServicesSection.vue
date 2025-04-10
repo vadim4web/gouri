@@ -1,7 +1,7 @@
 <template>
   <section id="services" class="services-section">
     <div class="services">
-      <div v-for="service, index in [1, 2, 3, 4, 5, 6]" :key="index" class="service" :class="index === 5 ? 'CTA' : ''">
+      <div v-for="service, index in 6" :key="index" class="service" :class="index === 5 ? 'CTA' : ''">
         <span>
           <img v-if="index !== 5" src="/images/arrow-b-r.svg" alt="arrow pointing service">
         </span>

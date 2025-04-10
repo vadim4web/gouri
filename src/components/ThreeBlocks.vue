@@ -4,7 +4,7 @@
       {{ $t('three_blocks_heading') }}
     </h2>
     <div class="blocks">
-      <div v-for="block, index in [1,2,3]" :key="index" class="block">
+      <div v-for="block, index in 3" :key="index" class="block">
         <span class="block-number">
           {{ '0' + (index + 1) }}
         </span>

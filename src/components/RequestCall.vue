@@ -1,5 +1,5 @@
 <template>
-  <form action="" class="request-call">
+  <form class="request-call" @submit.prevent="submitForm">
     <label for="phone">
       <small>{{ $t('services_6__') }}: 123-456-789</small>
     </label>
@@ -7,6 +7,7 @@
     <div class="inputs">
       <input
         id="phone"
+        v-model="phone"
         type="tel"
         name="phone"
         pattern="[0-9]{3}[0-9]{3}[0-9]{3}"
@@ -18,11 +19,11 @@
 
         <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_3038_74)">
-          <path d="M18.7838 16.9925L18.0104 6.45221M18.0104 6.45221L7.47013 5.67882M18.0104 6.45221L5.98963 18.473" stroke="#F8FAFC" stroke-width="2"/>
+          <path d="M18.7838 16.9925L18.0104 6.45221M18.0104 6.45221L7.47013 5.67882M18.0104 6.45221L5.98963 18.473" stroke="#F8FAFC" stroke-width="2" />
           </g>
           <defs>
           <clipPath id="clip0_3038_74">
-          <rect width="24" height="24" fill="white" transform="translate(0 0.962891)"/>
+          <rect width="24" height="24" fill="white" transform="translate(0 0.962891)" />
           </clipPath>
           </defs>
         </svg>
@@ -33,7 +34,44 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import emailjs from '@emailjs/browser'
+import { useI18n } from 'vue-i18n'
 
+const { locale } = useI18n()
+
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+const USER_KEY = import.meta.env.VITE_EMAILJS_USER_KEY
+
+const phone = ref('')
+
+const submitForm = async () => {
+	const text = `
+        Lang: ${locale.value}
+        Phone: ${phone.value}
+      `
+
+	try {
+		const templateParams = {
+			message: text.trim(),
+		}
+
+		const response = await emailjs.send(
+			SERVICE_ID,
+			TEMPLATE_ID,
+			templateParams,
+			{
+				publicKey: USER_KEY,
+			}
+		)
+		console.log('Email sent successfully!', response)
+	} catch (error) {
+		console.error('Error sending email:', error)
+	}
+
+	phone.value = ''
+}
 </script>
 
 <style lang="scss" scoped>

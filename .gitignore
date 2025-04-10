@@ -26,3 +26,4 @@ dist-ssr
 desktop.ini
 ico.ico
 package-lock.json
+.env

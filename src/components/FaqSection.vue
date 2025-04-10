@@ -37,25 +37,29 @@ const handleClick = ({ target: { parentNode } }) => {
   flex-direction: column;
   align-items: center;
 
+  padding-top: 3rem;
+
   &::before {
     position: absolute;
     z-index: -1;
-    top: 0;
+    top: -2px;
     left: 0;
     content: '';
     width: 100%;
-    height: 100%;
+    height: calc(100% + 4px);
     background: var(--color-dimmed);
   }
 
   @media (orientation: landscape) {
     padding-inline: 1.5rem;
     border-radius: 3.5rem;
+    padding-bottom: 5rem;
   }
 
   @media (orientation: portrait) {
     padding-inline: 1rem;
     border-radius: 2.5rem;
+    padding-bottom: 3rem;
   }
 
   h2 {

@@ -59,7 +59,7 @@ const delayedClose = () => setTimeout(() => closeMenu(), 333)
 }
 
 .nav-footer {
-  background: var(--color-dimmed);
+  background: var(--color-footer);
   width: 100%;
   height: 100%;
   position: relative;
