@@ -40,24 +40,28 @@ import RequestCall from './RequestCall.vue'
     .service {
       background: var(--color-dimmed);
       display: grid;
-
-      @media (orientation: landscape) {
-        grid-template-columns: 1.5rem 1fr 1fr;
-        padding: 3.5rem 5rem;
-        gap: 5rem;
-      }
-
-      @media (orientation: portrait) {
-        grid-template-rows: 1.5rem 1fr 1fr;
-        text-align: left;
-        padding: 2.5rem 1.5rem;
-        gap: 1rem;
-      }
-
-
       border-style: solid;
       border-width: 0 0 2px;
       border-color: white;
+
+      @media (orientation: landscape) {
+        & {
+          grid-template-columns: 1.5rem 1fr 1fr;
+          padding: 3.5rem 5rem;
+          gap: 5rem;
+        }
+      }
+
+      @media (orientation: portrait) {
+        & {
+          grid-template-rows: 1.5rem 1fr 1fr;
+          text-align: left;
+          padding: 2.5rem 1.5rem;
+          gap: 1rem;
+        }
+      }
+
+
 
       &:first-child {
         border-top-left-radius: 2.5rem;

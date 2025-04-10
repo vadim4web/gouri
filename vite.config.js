@@ -7,6 +7,7 @@ export default defineConfig(({ command, mode }) => {
 
 	const isProduction = mode === 'production' || command === 'build'
 	const base = isProduction ? '/gouri/' : '/' // ! should be set to '/'
+	// const base = '/' // ! should be set to '/'
 
 	return {
     plugins: [
