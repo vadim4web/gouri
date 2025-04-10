@@ -1,7 +1,7 @@
 <template>
   <form class="request-call" @submit.prevent="submitForm">
     <label for="phone">
-      <small>{{ $t('services_6__') }}: +48-79-333-7695</small>
+      <small>{{ $t('services_6__') }}: +48 79 333 7695</small>
     </label>
 
     <div class="inputs">
@@ -10,10 +10,10 @@
         v-model="phone"
         name="phone"
         autocomplete="tel"
-        placeholder="+48-79-333-7695"
+        placeholder="+48 79 333 7695"
         required
         aria-label="phone-input"
-        pattern="^\+48-\d{2}-\d{3}-\d{4}$"
+        pattern="^\+48 \d{2} \d{3} \d{4}$"
         @focus="prependCountryCode"
         @input="restrictPhoneInput"
         @blur="clearIfOnlyPrepender"
@@ -68,9 +68,9 @@ const restrictPhoneInput = event => {
 
   // Format the input as +380 99 999 9999
   input = input
-    .replace(/^(\+48)(\d{0,2})$/, '$1-$2')
-    .replace(/^(\+48)(\d{0,2})(\d{0,3})$/, '$1-$2-$3')
-    .replace(/^(\+48)(\d{0,2})(\d{0,3})(\d{0,4})$/, '$1-$2-$3-$4')
+    .replace(/^(\+48)(\d{0,2})$/, '$1 $2')
+    .replace(/^(\+48)(\d{0,2})(\d{0,3})$/, '$1 $2 $3')
+    .replace(/^(\+48)(\d{0,2})(\d{0,3})(\d{0,4})$/, '$1 $2 $3 $4')
 
   event.target.value = input
   phone.value = input
@@ -88,7 +88,6 @@ const submitForm = async () => {
 	const text = `
         Lang: ${locale.value}
         Phone: ${phone.value}
-        Number: ${phone.value.replaceAll('-', '')}
       `
 
 	try {
