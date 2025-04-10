@@ -18,6 +18,6 @@ import FooterSection from '~/components/FooterSection.vue'
 	<about-section />
 	<testimonials-section />
 	<faq-section />
-	<!-- <contacts-section /> -->
+	<contacts-section />
 	<!-- <footer-section /> -->
 </template>

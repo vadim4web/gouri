@@ -118,11 +118,13 @@ const { width, height } = useWindowSize()
 
 .vueperslide__title {
   font-size: 1.33rem;
+  text-align: left;
 }
 
 .vueperslide__content {
   text-transform: uppercase;
   font-weight: bold;
+  align-self: flex-start;
 }
 
 .vueperslides__arrows {

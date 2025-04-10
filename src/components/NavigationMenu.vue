@@ -1,14 +1,14 @@
 <template>
   <nav class="navigation-mobile">
     <menu class="navigation-mobile-menu">
-      <li class="navigation-mobile-menu-item"><a href="#services">{{ $t('services') }}</a></li>
-      <li class="navigation-mobile-menu-item"><a href="#about-us">{{ $t('aboutUs') }}</a></li>
-      <li class="navigation-mobile-menu-item"><a href="#contact-us">{{ $t('contactUs') }}</a></li>
+      <li class="navigation-mobile-menu-item"><a href="#services" @click="delayedClose()">{{ $t('services') }}</a></li>
+      <li class="navigation-mobile-menu-item"><a href="#about-us" @click="delayedClose()">{{ $t('aboutUs') }}</a></li>
+      <li class="navigation-mobile-menu-item"><a href="#contact-us" @click="delayedClose()">{{ $t('contactUs') }}</a></li>
     </menu>
 
     <language-select />
 
-    <call-button />
+    <call-button @click="closeMenu()" />
 
     <symbolic-image style="transform: scale(0.66) translateY(-7.5svh); margin-bottom: -10%;" />
 
@@ -22,6 +22,10 @@
 import LanguageSelect from './LanguageSelect.vue'
 import CallButton from './CallButton.vue'
 import SymbolicImage from './SymbolicImage.vue'
+
+const { closeMenu } = defineProps({ closeMenu: { type: Function } })
+
+const delayedClose = () => setTimeout(() => closeMenu(), 333)
 </script>
 
 <style lang="scss">

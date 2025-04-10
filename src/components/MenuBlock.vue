@@ -25,7 +25,7 @@
       </svg>
     </button>
 
-    <navigation-menu v-show="isMenuOpen" />
+    <navigation-menu v-show="isMenuOpen" :closeMenu="() => isMenuOpen = false" />
   </header>
 </template>
 
@@ -57,6 +57,11 @@ const isMenuOpen = ref(false)
     border: none;
     background: none;
     cursor: pointer;
+
+    svg {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
 
     .close:hover path {
       stroke: var(--color);

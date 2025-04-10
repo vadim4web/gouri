@@ -8,6 +8,9 @@
 </template>
 
 <style>
+.logo-span {
+  transition: color 333ms;
+}
 .logo-span:hover {
   color: var(--color);
 }

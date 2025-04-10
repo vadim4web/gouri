@@ -70,14 +70,18 @@
     border-bottom-left-radius: 0;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
+    border-style: solid;
     border-color: transparent;
+    border-width: 1px;
     background: var(--color-light);
     color: white;
 
-    &:focus,
-    &:focus-visible {
-      outline: none;
+    &:hover,
+    &:active {
+      background: var(--color-light);
+      text-shadow: 0 0 0.05rem var(--color);
       border-color: var(--color-light);
+      box-shadow: inset 0 0 0.5rem var(--color);
     }
 
     svg {

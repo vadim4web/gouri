@@ -93,16 +93,32 @@
     background: var(--color);
     padding-block: 0.375rem;
     cursor: pointer;
+    border: 1px solid var(--color);
 
     span {
       padding: 0.75rem;
       border-radius: 50%;
       background: white;
       position: relative;
+      border: 1px solid var(--color);
 
       svg {
         width: 1.25rem;
         height: 1.25rem;
+      }
+    }
+
+    &:hover,
+    &:active {
+      background: var(--color-light);
+
+      text-shadow: 0 0 0.05rem var(--color50);
+      border-color: var(--color50);
+      box-shadow: inset 0 0 0.5rem var(--color50);
+
+      span {
+        border-color: var(--color50);
+        box-shadow: 0 0 0.5rem var(--color50);
       }
     }
   }

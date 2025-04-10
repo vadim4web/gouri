@@ -110,3 +110,7 @@ a:hover {
 a:active {
   color: var(--color-light);
 }
+
+a, button {
+  transition: all 333ms;
+}
