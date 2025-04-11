@@ -57,7 +57,8 @@ import AddressLinks from './AddressLinks.vue'
 
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    width: 100%;
   }
 
   @media (orientation: portrait) {
@@ -143,6 +144,12 @@ import AddressLinks from './AddressLinks.vue'
 
     @media (orientation: landscape) {
       gap: 5rem;
+    }
+
+    @media (orientation: landscape) and (max-width: 1399px){
+      .email-form {
+        flex-wrap: wrap;
+      }
     }
 
     @media (orientation: portrait) {

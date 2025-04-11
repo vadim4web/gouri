@@ -105,7 +105,7 @@
         line-height: 1.4;
         font-size: 1.25rem;
         font-family: "Montserrat", sans-serif;
-        color: var(--color-red-gray);
+        color: var(--color-dimmed);
         font-weight: 500;
       }
     }

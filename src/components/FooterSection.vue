@@ -5,13 +5,16 @@
     </logo-component>
 
     <div class="footer-copy">
-      {{ $t('copyright') }} &copy; 2018 - {{ new Date().getFullYear() }} GOURI Agency
+      {{ $t('copyright') }} &copy; 2018 - {{ new Date().getFullYear() }} {{ currentURL || 'gouri.com.pl' }}
     </div>
   </footer>
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import LogoComponent from './LogoComponent.vue'
+
+const currentURL = computed(() => window.location.href.split('/').filter(url => url)[1])
 </script>
 
 <style lang="scss">

@@ -10,10 +10,10 @@
 
     <call-button @click="closeMenu()" />
 
-    <symbolic-image style="transform: scale(0.66) translateY(-7.5svh); margin-bottom: -10%;" />
+    <img src="/images/symbol.webp" alt="company spirit incapsulated in an image" class="navigation-mobile-image">
 
     <div class="nav-footer">
-      {{ $t('copyright') }} &copy; 2018 - {{ new Date().getFullYear() }} GOURI Agency
+      {{ $t('copyright') }} &copy; 2018 - {{ new Date().getFullYear() }} {{ currentURL || 'gouri.com.pl' }}
     </div>
   </nav>
 </template>
@@ -21,7 +21,9 @@
 <script setup>
 import LanguageSelect from './LanguageSelect.vue'
 import CallButton from './CallButton.vue'
-import SymbolicImage from './SymbolicImage.vue'
+import { computed } from 'vue'
+
+const currentURL = computed(() => window.location.href.split('/').filter(url => url)[1])
 
 const { closeMenu } = defineProps({ closeMenu: { type: Function } })
 
@@ -44,6 +46,13 @@ const delayedClose = () => setTimeout(() => closeMenu(), 333)
   grid-template-rows: 5fr 2fr 2fr 3fr 3fr;
   align-content: center;
   justify-items: center;
+}
+
+.navigation-mobile-image {
+  transform: scale(0.66) translate(-1rem, -5svh);
+  margin-bottom: -10%;
+  filter: drop-shadow(0 0 1rem var(--color));
+  margin: -2.5rem;
 }
 
 .navigation-mobile-menu {

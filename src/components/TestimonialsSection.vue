@@ -1,7 +1,7 @@
 <template>
   <section class="testemonials-section">
     <h2 class="testemonials-heading">
-      <span class="part1">
+      <span class="part1" :data-text="$t('testemonials_header')">
         {{ $t('testemonials_header') }}
       </span>
       <br>
@@ -9,7 +9,7 @@
         {{ $t('testemonials_header_') }}
       </span>
       <wbr />
-      <span class="part3">
+      <span class="part3" :data-text="$t('testemonials_header__')">
         {{ $t('testemonials_header__') }}
       </span>
     </h2>
@@ -44,15 +44,25 @@ import TestemonialsSlider from './TestemonialsSlider.vue'
     text-align: left;
     text-transform: uppercase;
     font-family: 'Unbounded';
-    text-shadow: 0 0.5rem 0.5rem var(--color-coal);
 
     .part2 {
       color: var(--color-grey);
+      text-shadow: 0 0 3px var(--color-coal);
     }
 
     .part1,
     .part3 {
+      display: inline-block;
       color: var(--color-dimmed);
+      text-shadow: 0 0 3px white;
+      position: relative;
+
+      &::before,
+      &::after {
+        position: absolute;
+        left: 0;
+        content: attr(data-text);
+      }
     }
 
     @media (orientation: landscape) {

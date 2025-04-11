@@ -6,7 +6,7 @@
         <img src="/images/arrow-b-r.png" alt="arrow accenting approach">
       </h2>
 
-      <img src="/images/symbol.png" alt="company approach visualized" class="about-image">
+      <img src="/images/symbol.webp" alt="company approach visualized" class="about-image" loading="lazy" >
     </div>
 
     <div class="about-description">

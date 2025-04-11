@@ -9,9 +9,10 @@
 
 <style>
 .logo-span {
-  transition: color 333ms;
+  transition: color 333ms, text-shadow 333ms;
 }
 .logo-span:hover {
   color: var(--color);
+  text-shadow: 0 0 2px white;
 }
 </style>

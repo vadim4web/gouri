@@ -37,7 +37,7 @@
   }
 
   .part1 {
-    color: var(--color-red-gray50);
+    color: var(--color-red-gray);
   }
   .part2 {
     color: var(--color);

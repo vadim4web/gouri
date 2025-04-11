@@ -151,6 +151,7 @@ const submitForm = async () => {
     border-width: 1px;
     background: var(--color-light);
     color: white;
+    font-weight: bold;
 
     &:hover,
     &:active {

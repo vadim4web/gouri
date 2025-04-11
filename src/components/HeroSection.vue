@@ -21,7 +21,7 @@
       </div>
     </div>
 
-    <img src="/images/symbol.png" alt="company spirit incapsulated in an image" class="hero-image">
+    <img src="/images/symbol.webp" alt="company spirit incapsulated in an image" class="hero-image">
   </section>
 </template>
 
@@ -50,7 +50,7 @@ const { width, height } = useWindowSize()
   @media (orientation: landscape) {
     height: 50dvh;
     bottom: 12.5dvh;
-    right: 10rem;
+    right: 5rem;
   }
 
   @media (orientation: portrait) {
