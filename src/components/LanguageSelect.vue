@@ -1,9 +1,17 @@
 <template>
-  <div class="language-select">
-    <a role="button" :class="locale == 'uk' ? 'selected' : ''" @click="setLocale('uk')">UK</a>
-    <span style="color: var(--color-gray50);">|</span>
-    <a role="button" :class="locale == 'ru' ? 'selected' : ''" @click="setLocale('ru')">RU</a>
-  </div>
+	<div class="language-select">
+		<a
+			role="button"
+			:class="locale == 'uk' ? 'selected' : ''"
+			@click="setLocale('uk')"
+			>UK</a>
+		<span style="color: var(--color-gray50)">|</span>
+		<a
+			role="button"
+			:class="locale == 'ru' ? 'selected' : ''"
+			@click="setLocale('ru')"
+			>RU</a>
+	</div>
 </template>
 
 <script setup>
@@ -12,36 +20,36 @@ import { useI18n } from 'vue-i18n'
 
 const { locale } = useI18n()
 
-const setLocale = (lang) => locale.value = lang
+const setLocale = lang => (locale.value = lang)
 
 onMounted(() => {
-  const browserLang = navigator.language || navigator.userLanguage
+	const browserLang = navigator.language || navigator.userLanguage
 
-  if (
-    browserLang.toLowerCase().startsWith('uk')
-    || browserLang.toLowerCase().startsWith('ua')
-  ) {
-    setLocale('uk')
-  }
+	if (
+		browserLang.toLowerCase().startsWith('uk') ||
+		browserLang.toLowerCase().startsWith('ua')
+	) {
+		setLocale('uk')
+	}
 })
 </script>
 
 <style lang="scss" scoped>
 .language-select {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  gap: 0.25rem;
-  padding: 1rem;
-  width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	gap: 0.25rem;
+	padding: 1rem;
+	width: 100%;
 
-  :not(.selected) {
-    color: var(--color-gray);
-  }
+	:not(.selected) {
+		color: var(--color-gray);
+	}
 
-  a:hover {
-    color: var(--color);
-  }
+	a:hover {
+		color: var(--color);
+	}
 }
 </style>

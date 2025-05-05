@@ -11,7 +11,7 @@ import FooterSection from '~/components/FooterSection.vue'
 </script>
 
 <template>
-  <hero-section />
+	<hero-section />
 	<three-blocks />
 	<head-line />
 	<services-section />

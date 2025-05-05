@@ -1,159 +1,161 @@
 @import '~/assets/css/reset.css';
 
 @font-face {
-  font-family: 'Angry';
-  src: url('/fonts/Angry.woff2') format('woff2'), /* Modern Browsers */
-       url('/fonts/Angry.otf') format('opentype'); /* Safari, Android, iOS */
-  font-style: normal;
-  font-weight: normal;
-  text-rendering: optimizeLegibility;
+	font-family: 'Angry';
+	src:
+		url('/fonts/Angry.woff2') format('woff2'),
+		/* Modern Browsers */ url('/fonts/Angry.otf') format('opentype'); /* Safari, Android, iOS */
+	font-style: normal;
+	font-weight: normal;
+	text-rendering: optimizeLegibility;
 }
 
 * {
-  scroll-behavior: smooth;
-  scroll-behavior: smooth; /* Enables smooth scrolling */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-  -moz-overflow-scrolling: touch; /* Mozilla-specific smooth scrolling */
+	scroll-behavior: smooth;
+	scroll-behavior: smooth; /* Enables smooth scrolling */
+	-webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+	-moz-overflow-scrolling: touch; /* Mozilla-specific smooth scrolling */
 
-  transition: all 333ms;
-  -webkit-transition: all 333ms;
-  -moz-transition: all 333ms;
-  -ms-transition: all 333ms;
-  -o-transition: all 333ms;
+	transition: all 333ms;
+	-webkit-transition: all 333ms;
+	-moz-transition: all 333ms;
+	-ms-transition: all 333ms;
+	-o-transition: all 333ms;
 
-  transition: background 0ms;
-  -webkit-transition: background 0ms;
-  -moz-transition: background 0ms;
-  -ms-transition: background 0ms;
-  -o-transition: background 0ms;
+	transition: background 0ms;
+	-webkit-transition: background 0ms;
+	-moz-transition: background 0ms;
+	-ms-transition: background 0ms;
+	-o-transition: background 0ms;
 }
 
 :root {
-  --color: #eb0000;
-  --color50: #eb000080;
-  /* --color-dimmed: #670f0f; */
-  --color-dimmed: #2a0f0f;
-  --color-light: #ff6161;
-  --color-gray: #808080;
-  --color-gray-a: #80808080;
-  --color-grey-a: #e0e0e080;
-  --color-grey: #e0e0e0;
-  --color-coal: #101010;
-  /* --color-footer: hsl(0, 20%, 15%); */
-  --color-footer: #3b1e20;
-  --color-gray50: #231d1d80;
-  --color-red-gray: #997570;
-  /* --color-red-gray50: #cfafaf; */
-  --color-red-gray50: #b89498;
+	--color: #eb0000;
+	--color50: #eb000080;
+	/* --color-dimmed: #670f0f; */
+	--color-dimmed: #2a0f0f;
+	--color-light: #ff6161;
+	--color-gray: #808080;
+	--color-gray-a: #80808080;
+	--color-grey-a: #e0e0e080;
+	--color-grey: #e0e0e0;
+	--color-coal: #101010;
+	/* --color-footer: hsl(0, 20%, 15%); */
+	--color-footer: #3b1e20;
+	--color-gray50: #231d1d80;
+	--color-red-gray: #997570;
+	/* --color-red-gray50: #cfafaf; */
+	--color-red-gray50: #b89498;
 
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-family: 'Montserrat', sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
-  font-size: 1.66vmin;
+	font-size: 1.66vmin;
 }
 
 em {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-style: italic !important;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-style: italic !important;
 }
 
 @media (orientation: portrait) and (max-width: 539px) {
-  :root {
-    font-size: 2.75vmin;
-  }
+	:root {
+		font-size: 2.75vmin;
+	}
 }
 
 @media (orientation: portrait) and (min-width: 540px) {
-  :root {
-    font-size: 1.75vmin;
-  }
+	:root {
+		font-size: 1.75vmin;
+	}
 }
 
 @media (orientation: landscape) and (max-width: 1023px) {
-  :root {
-    font-size: 2vmin;
-  }
+	:root {
+		font-size: 2vmin;
+	}
 }
 
 @media (orientation: landscape) and (min-width: 1024px) {
-  :root {
-    font-size: 1.66vmin;
-  }
+	:root {
+		font-size: 1.66vmin;
+	}
 }
 
 ::selection {
-  background: var(--color50);
-  color: white;
+	background: var(--color50);
+	color: white;
 }
 ::-moz-selection {
-  background: var(--color50);
-  color: white;
+	background: var(--color50);
+	color: white;
 }
 
 /* WebKit scrollbar (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
-  width: 0.5rem;
+	width: 0.5rem;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: var(--color-gray-a);
-  border-radius: 0.25rem;
+	background-color: var(--color-gray-a);
+	border-radius: 0.25rem;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--color-gray);
+	background-color: var(--color-gray);
 }
 ::-webkit-scrollbar-track {
-  background-color: var(--color-grey-a);
+	background-color: var(--color-grey-a);
 }
 ::-webkit-scrollbar-track:hover {
-  background-color: var(--color-grey);
+	background-color: var(--color-grey);
 }
 
 .unbounded {
-  font-family: "Unbounded", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'Unbounded', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: normal;
+	font-style: normal;
 }
 
 body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
+	margin: 0;
+	min-width: 320px;
+	min-height: 100vh;
 }
 
 #app {
-  margin: 0 auto;
-  text-align: center;
+	margin: 0 auto;
+	text-align: center;
 }
 
 section {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .pocket {
-  border-bottom-left-radius: 2.5rem;
-  border-bottom-right-radius: 2.5rem;
+	border-bottom-left-radius: 2.5rem;
+	border-bottom-right-radius: 2.5rem;
 }
 
 a:link,
 a:visited {
-  color: black;
+	color: black;
 }
 
 a:hover {
-  color: var(--color);
+	color: var(--color);
 }
 
 a:active {
-  color: var(--color-light);
+	color: var(--color-light);
 }
 
-a, button {
-  transition: all 333ms;
+a,
+button {
+	transition: all 333ms;
 }

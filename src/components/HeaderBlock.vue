@@ -1,11 +1,9 @@
 <template>
-  <header class="header">
-    <logo-component class="header-logo">
-      GOURI
-    </logo-component>
+	<header class="header">
+		<logo-component class="header-logo"> GOURI </logo-component>
 
-    <navigation-list />
-  </header>
+		<navigation-list />
+	</header>
 </template>
 
 <script setup>
@@ -15,46 +13,45 @@ import NavigationList from './NavigationList.vue'
 
 <style lang="scss">
 .header {
-  display: grid;
-  grid-template-columns: 1fr 3.5fr;
+	display: grid;
+	grid-template-columns: 1fr 3.5fr;
 
-  height: 5.5rem;
+	height: 5.5rem;
 
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-  place-items: center;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	justify-items: center;
+	place-items: center;
 
-  width: 100%;
-  padding: 1rem 5rem;
+	width: 100%;
+	padding: 1rem 5rem;
 
-  font-weight: bold;
+	font-weight: bold;
 
-  &>* {
-    width: 100%;
-  }
+	& > * {
+		width: 100%;
+	}
 }
 
 .header .header-logo.logo-box {
-  display: flex;
+	display: flex;
 
-  flex-direction: column;
+	flex-direction: column;
 
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  min-width: max-content;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	min-width: max-content;
 
-  margin: -1rem 0;
-  transform: translateY(0.36rem);
+	margin: -1rem 0;
+	transform: translateY(0.36rem);
 
-  img {
-    width: 3.5rem;
-    aspect-ratio: 1;
-    margin: -0.75rem 0;
-  }
-
+	img {
+		width: 3.5rem;
+		aspect-ratio: 1;
+		margin: -0.75rem 0;
+	}
 }
 </style>

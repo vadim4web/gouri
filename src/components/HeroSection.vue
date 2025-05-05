@@ -1,28 +1,32 @@
 <template>
-  <section class="hero pocket">
-    <header-block v-if="width >= height" />
-    <menu-block v-else />
+	<section class="hero pocket">
+		<header-block v-if="width >= height" />
+		<menu-block v-else />
 
-    <div class="container">
-      <div class="content">
-        <h1 class="hero-headline">
-          <span class="part1">
-            {{ $t('hero_headline1') }}
-          </span>
-          <br>
-          <span class="part2">
-            {{ $t('hero_headline2') }}
-          </span>
-        </h1>
-        <p>
-          {{ $t('hero_moto') }}
-        </p>
-        <email-form />
-      </div>
-    </div>
+		<div class="container">
+			<div class="content">
+				<h1 class="hero-headline">
+					<span class="part1">
+						{{ $t('hero_headline1') }}
+					</span>
+					<br />
+					<span class="part2">
+						{{ $t('hero_headline2') }}
+					</span>
+				</h1>
+				<p>
+					{{ $t('hero_moto') }}
+				</p>
+				<email-form />
+			</div>
+		</div>
 
-    <img src="/images/symbol.webp" alt="company spirit incapsulated in an image" class="hero-image">
-  </section>
+		<img
+			src="/images/symbol.webp"
+			alt="company spirit incapsulated in an image"
+			class="hero-image"
+		/>
+	</section>
 </template>
 
 <script setup>
@@ -36,86 +40,85 @@ const { width, height } = useWindowSize()
 
 <style lang="scss">
 .hero {
-  background: linear-gradient(180deg, #fff, var(--color-red-gray));
-  height: 87.5dvh;
-  position: relative;
+	background: linear-gradient(180deg, #fff, var(--color-red-gray));
+	height: 87.5dvh;
+	position: relative;
 }
 
 .hero-image {
-  filter: drop-shadow(0 0 1rem var(--color));
-  aspect-ratio: 558 / 706;
-  object-fit: contain;
-  position: absolute;
+	filter: drop-shadow(0 0 1rem var(--color));
+	aspect-ratio: 558 / 706;
+	object-fit: contain;
+	position: absolute;
 
-  @media (orientation: landscape) {
-    height: 50dvh;
-    bottom: 12.5dvh;
-    right: 5rem;
-  }
+	@media (orientation: landscape) {
+		height: 50dvh;
+		bottom: 12.5dvh;
+		right: 5rem;
+	}
 
-  @media (orientation: portrait) {
-    height: 30dvh;
-    bottom: -11.5dvh;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+	@media (orientation: portrait) {
+		height: 30dvh;
+		bottom: -11.5dvh;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 }
 
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 63vw;
-  padding: 0 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 63vw;
+	padding: 0 1rem;
 
-  overflow-x: hidden;
+	overflow-x: hidden;
 
-  @media (orientation: landscape) {
-    height: calc(85dvh - 5.5rem);
-    padding: 0 0 0 7.5rem;
-  }
+	@media (orientation: landscape) {
+		height: calc(85dvh - 5.5rem);
+		padding: 0 0 0 7.5rem;
+	}
 
+	@media (orientation: portrait) {
+		height: 60dvh;
+		flex-direction: column;
+		width: 30rem;
+		margin: 0 auto;
+	}
 
-  @media (orientation: portrait) {
-    height: 60dvh;
-    flex-direction: column;
-    width: 30rem;
-    margin: 0 auto;
-  }
+	.content {
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
 
-  .content {
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+		max-width: 100vw;
+		overflow-x: hidden;
 
-    max-width: 100vw;
-    overflow-x: hidden;
+		@media (orientation: portrait) {
+			gap: 2.5rem;
+		}
 
-    @media (orientation: portrait) {
-      gap: 2.5rem;
-    }
+		h1 {
+			font-family: 'Unbounded';
+			font-weight: 500;
 
-    h1 {
-      font-family: 'Unbounded';
-      font-weight: 500;
+			@media (orientation: portrait) {
+				font-size: 2.5rem;
+			}
 
-      @media (orientation: portrait) {
-        font-size: 2.5rem;
-      }
+			@media (orientation: landscape) {
+				font-size: 3.5rem;
+			}
 
-      @media (orientation: landscape) {
-        font-size: 3.5rem;
-      }
+			.part1 {
+				color: var(--color);
+			}
+		}
 
-      .part1 {
-        color: var(--color);
-      }
-    }
-
-    p {
-      font-size: 1.25rem;
-    }
-  }
+		p {
+			font-size: 1.25rem;
+		}
+	}
 }
 </style>
