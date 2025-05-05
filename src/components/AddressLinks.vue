@@ -33,7 +33,7 @@
           </svg>
 
           <span class="link-text">
-            info@gouri.42web.io
+            gouri@wp.pl
           </span>
       </a>
     </li>

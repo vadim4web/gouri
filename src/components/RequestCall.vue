@@ -152,6 +152,7 @@ const submitForm = async () => {
     background: var(--color-light);
     color: white;
     font-weight: bold;
+    cursor: pointer;
 
     &:hover,
     &:active {

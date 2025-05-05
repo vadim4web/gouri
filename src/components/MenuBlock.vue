@@ -25,7 +25,11 @@
       </svg>
     </button>
 
-    <navigation-menu v-show="isMenuOpen" :closeMenu="() => isMenuOpen = false" />
+    <navigation-menu
+      v-show="isMenuOpen"
+      v-out-of-view="closeMenu"
+      :close-menu="closeMenu"
+    />
   </header>
 </template>
 
@@ -35,6 +39,8 @@ import LogoComponent from './LogoComponent.vue'
 import NavigationMenu from './NavigationMenu.vue'
 
 const isMenuOpen = ref(false)
+
+const closeMenu = () => isMenuOpen.value = false
 </script>
 
 <style lang="scss">

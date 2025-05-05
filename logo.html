@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      display: grid;
+      place-items: center;
+    }
+
+    .logo {
+      width: 192px;
+      height: 192px;
+      border-radius: 50%;
+      background: black;
+      position: relative;
+      overflow: hidden;
+      visibility: hidden;
+
+      .circle {
+        width: 68%;
+        height: 68%;
+        border-radius: 50%;
+        background: white;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        overflow: hidden;
+      }
+
+      .circle::after,
+      .circle::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+      }
+
+      /* .circle::before {
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+      } */
+
+      .circle::after {
+        top: 50%;
+        right: 0;
+        transform: translate(0, 0);
+        border: 1px solid red;
+        background: red;
+        z-index: -100;
+      }
+
+      .rect {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 50%;
+        height: 16%;
+        background: black;
+        transform: translate(0%, -50%);
+      }
+      .rect::after {
+        position: absolute;
+        content: '';
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        transform: translate(0%, -100%);
+      }
+
+      /* .flag {
+        position: absolute;
+        right: 0;
+        top: 15%;
+        width: 50%;
+        height: 50%;
+        border-radius: 50%;
+        border: 1px solid red;
+        z-index: 1;
+      } */
+    }
+
+    svg {
+    }
+
+    .vector {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      place-items: center;
+    }
+
+    .gouri, .trika, .navadurga {
+      margin-top: 5rem;
+      width: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <div class="circle">
+      <div class="flag"></div>
+    </div>
+    <div class="rect"></div>
+  </div>
+
+  <div class="vector">
+    <svg
+      viewBox="0 0 100 100"
+      xmlns="http://www.w3.org/2000/svg"
+      class="logo-image logo-letter"
+      stroke-width="8"
+    >
+      <line x1="50" y1="50" x2="100" y2="50" stroke="#000" />
+      <path d="M 50,4 A 46,46, 0,1,0, 96,50" fill="none" stroke="#000" />
+      <path d="M 50,50 A 23,23, 0,1,0, 96,50" fill="red" stroke="#000" transform="translate(-22 0)"/>
+      <path d="M 50,50 A 23,23, 0,1,1, 96,50" fill="white" stroke="#000" transform="translate(-22 0)" />
+      <!-- <circle cx="50" cy="50" r="46" fill="none" /> -->
+    </svg>
+
+    <svg
+      viewBox="0 0 100 20"
+      xmlns="http://www.w3.org/2000/svg"
+      class="logo-image logo-letter"
+      stroke-width="1"
+      style="border: none; overflow: visible;"
+      transform="translate(0 -10)"
+    >
+      <text x="2" y="21" fill="red" stroke="red" font-size="30">श्री GOURI</text>
+      <!-- <circle cx="50" cy="50" r="46" fill="none" /> -->
+    </svg>
+  </div>
+
+  <div class="gouri">
+    <svg
+    viewBox="0 0 200 200"
+    xmlns="http://www.w3.org/2000/svg"
+    stroke-width="10"
+    style="border: 1px solid salmon"
+    transform="translate(0 0)"
+  >
+    <line x1="5" y1="65.5" x2="45.08" y2="134.7" stroke="#000" />
+    <line x1="5" y1="65.5" x2="160" y2="65.5" stroke="#000" />
+    <line x1="177.5" y1="35" x2="97.5" y2="35" stroke="#000" />
+    <line x1="177.5" y1="35" x2="100" y2="169.5" stroke="#000" />
+    <line x1="117.5" y1="199.5" x2="40" y2="65.5" stroke="#000" />
+    <line x1="117.5" y1="199.5" x2="157.58" y2="129.98" stroke="#000" />
+  </svg>
+  </div>
+  <div class="trika">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" transform="scale(0.82)" style="overflow: visible;">
+      <!-- Великий перевернутий трикутник -->
+      <polygon points="0,13.4 200,13.4 100,186.6" fill="none" stroke="black" stroke-width="1"/>
+      
+      <!-- Перший малий трикутник -->
+      <polygon points="0,13.4 50,100 100,13.4" fill="red" stroke="black" stroke-width="25"/>
+      
+      <!-- Другий малий трикутник -->
+      <polygon points="100,13.4 150,100 200,13.4" fill="red" stroke="black" stroke-width="25"/>
+      
+      <!-- Третій малий трикутник (центр) -->
+      <polygon points="50,100 100,186.6 150,100" fill="red" stroke="black" stroke-width="25"/>
+    </svg>
+  </div>
+
+  <div class="navadurga">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" transform="scale(0.88)" style="overflow: visible;">
+      <!-- Великий трикутник -->
+      <polygon points="0,13.4 200,13.4 100,186.6" fill="none" stroke="black" stroke-width="1"/>
+      
+      <!-- 1-й верхній рівносторонній трикутник (ліворуч) -->
+      <polygon points="0,13.4 33.6,71.6 67.2,13.4" fill="red" stroke="black" stroke-width="16"/>
+      
+      <!-- 2-й верхній рівносторонній трикутник (середній) -->
+      <polygon points="67.2,13.4 100,71.6 133.6,13.4" fill="red" stroke="black" stroke-width="16"/>
+      
+      <!-- 3-й верхній рівносторонній трикутник (правий) -->
+      <polygon points="133.6,13.4 167.2,71.6 200,13.4" fill="red" stroke="black" stroke-width="16"/>
+      
+      <!-- 4-й середній рівносторонній трикутник (ліворуч) -->
+      <polygon points="33.6,71.6 67.2,129.8 100,71.6" fill="red" stroke="black" stroke-width="16"/>
+      
+      <!-- 5-й середній рівносторонній трикутник (правий) -->
+      <polygon points="100,71.6 133.6,129.8 167.2,71.6" fill="red" stroke="black" stroke-width="16"/>
+      
+      <!-- 6-й нижній рівносторонній трикутник -->
+      <polygon points="67.2,129.8 100,188 133.6,129.8" fill="red" stroke="black" stroke-width="16"/>
+    </svg>
+    
+  </div>
+</body>
+</html>

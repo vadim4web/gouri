@@ -7,12 +7,15 @@
     <div class="footer-copy">
       {{ $t('copyright') }} &copy; 2018 - {{ new Date().getFullYear() }} {{ currentURL || 'gouri.com.pl' }}
     </div>
+
+    <dev-component />
   </footer>
 </template>
 
 <script setup>
 import { computed } from 'vue'
 import LogoComponent from './LogoComponent.vue'
+import DevComponent from './DevComponent.vue'
 
 const currentURL = computed(() => window.location.href.split('/').filter(url => url)[1])
 </script>
@@ -59,7 +62,7 @@ const currentURL = computed(() => window.location.href.split('/').filter(url => 
   gap: 0.5rem;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   min-width: max-content;
 
@@ -76,5 +79,9 @@ const currentURL = computed(() => window.location.href.split('/').filter(url => 
     aspect-ratio: 1;
   }
 
+  .logo-span {
+    position: relative;
+    top: 0.125em;
+  }
 }
 </style>

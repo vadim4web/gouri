@@ -1,5 +1,5 @@
 <template>
-  <section class="faq-section">
+  <section v-click-outside="handleClickOutside" class="faq-section">
     <div class="section-wrapper">
       <h2>
         {{ $t('faq_heading') }}
@@ -27,6 +27,12 @@ const handleClick = ({ target: { parentNode } }) => {
     }
   })
   parentNode.classList.toggle('closed')
+}
+
+const handleClickOutside = () => {
+  Array.from(document.querySelectorAll('.faq')).forEach(faq => {
+    faq.classList.add('closed')
+  })
 }
 </script>
 

@@ -13,7 +13,11 @@
     <img src="/images/symbol.webp" alt="company spirit incapsulated in an image" class="navigation-mobile-image">
 
     <div class="nav-footer">
-      {{ $t('copyright') }} &copy; 2018 - {{ new Date().getFullYear() }} {{ currentURL || 'gouri.com.pl' }}
+      <div class="copyright">
+        {{ $t('copyright') }} &copy; 2018 - {{ new Date().getFullYear() }} {{ currentURL || 'gouri.com.pl' }}
+      </div>
+
+      <dev-component />
     </div>
   </nav>
 </template>
@@ -21,6 +25,7 @@
 <script setup>
 import LanguageSelect from './LanguageSelect.vue'
 import CallButton from './CallButton.vue'
+import DevComponent from './DevComponent.vue'
 import { computed } from 'vue'
 
 const currentURL = computed(() => window.location.href.split('/').filter(url => url)[1])
@@ -76,8 +81,10 @@ const delayedClose = () => setTimeout(() => closeMenu(), 333)
   font-weight: 500;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
 }
 
 [href^="#"] {

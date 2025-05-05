@@ -57,6 +57,11 @@
   font-size: 1.66vmin;
 }
 
+em {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic !important;
+}
+
 @media (orientation: portrait) and (max-width: 539px) {
   :root {
     font-size: 2.75vmin;
