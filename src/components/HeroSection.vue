@@ -25,6 +25,8 @@
 			src="/images/symbol.webp"
 			alt="company spirit incapsulated in an image"
 			class="hero-image"
+			width="558"
+			height="706"
 		/>
 	</section>
 </template>

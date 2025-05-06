@@ -9,6 +9,7 @@
     "build": "vite build && cp CNAME dist/",
     "preview": "vite preview",
     "predeploy": "npm run build",
+    "predeploy_": "echo 'predeploy'",
     "deploy": "gh-pages -d dist",
     "prettify": "prettier src/**/*.{js,vue,css} --write",
     "lint": "eslint --fix src/**/*.{js,vue}",
@@ -17,6 +18,7 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@vueuse/core": "^13.0.0",
+    "critical": "^7.2.1",
     "emailjs-com": "^3.2.0",
     "vue": "^3.5.13",
     "vue-i18n": "^11.1.2",
@@ -29,7 +31,6 @@
     "eslint-plugin-vue": "^10.0.0",
     "gh-pages": "^6.3.0",
     "prettier": "^3.5.3",
-    "rollup-plugin-critical": "^1.0.15",
     "sass": "^1.86.1",
     "vite": "^6.2.0"
   }

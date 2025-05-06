@@ -7,20 +7,20 @@ export default defineConfig({
   plugins: [
     vue(),
 
-    // 🧠 Critical CSS generation
+    // ⚙️ Генерація критичного CSS після білду
     critical({
-      criticalUrl: 'https://gouri.com.pl/', // локальний сервер після білду
-      criticalBase: 'dist/', // куди зберігається HTML після білду
+      criticalUrl: 'https://gouri.com.pl/',
+      criticalBase: 'dist/',
       criticalPages: [
-        { uri: '', template: 'index' }, // головна сторінка → dist/index.html
+        { uri: '', template: 'index' },
       ],
       criticalConfig: {
-        inline: true,       // 🟢 Вставити <style> критичного CSS прямо в HTML
-        extract: false,     // 🔴 Не видаляти не-критичні стилі
-        width: 375,         // 📱 Ширина для мобільного portrait
-        height: 812,        // 📱 Висота для мобільного portrait
+        inline: true,
+        extract: false,
+        width: 375,
+        height: 812,
         penthouse: {
-          blockJSRequests: false, // дозволити JS, якщо потрібно для рендеру
+          blockJSRequests: false,
         },
       },
     }),
@@ -36,6 +36,15 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         api: 'modern-compiler',
+      },
+    },
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: 'assets/[name].js',
+        chunkFileNames: 'assets/[name].js',
+        assetFileNames: 'assets/[name][extname]',
       },
     },
   },

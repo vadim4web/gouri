@@ -11,6 +11,8 @@
 				alt="company approach visualized"
 				class="about-image"
 				loading="lazy"
+				width="558"
+				height="706"
 			/>
 		</div>
 
@@ -76,12 +78,16 @@
 	.about-image {
 		filter: drop-shadow(0 0 1rem var(--color));
 
+		aspect-ratio: 558 / 706 !important;
+
 		@media (orientation: landscape) {
 			height: 20rem;
+			width: 15.8rem;
 		}
 
 		@media (orientation: portrait) {
 			width: 15rem;
+			height: 19rem;
 			margin-inline: auto;
 
 			margin-top: 0;
