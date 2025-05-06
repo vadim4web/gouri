@@ -1,1 +1,0 @@
-import{_ as t,c as n,o as c,a as e,t as a}from"./index-_fDfSwi-.js";const o={},_={class:"head-line unbounded"},r={class:"part1"},d={class:"part2"};function i(s,l){return c(),n("section",_,[e("h2",null,[e("span",r,a(s.$t("services_heading")),1),e("span",d,a(s.$t("services_heading_")),1)])])}const h=t(o,[["render",i],["__scopeId","data-v-579958b3"]]);export{h as default};
