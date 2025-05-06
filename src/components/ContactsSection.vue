@@ -160,7 +160,7 @@ import AddressLinks from './AddressLinks.vue'
 	}
 
 	.email-form .email {
-		max-width: 45ch;
+		max-width: 100%;
 	}
 }
 </style>

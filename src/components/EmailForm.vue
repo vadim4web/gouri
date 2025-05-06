@@ -156,7 +156,7 @@ const submitForm = async () => {
 
 	.email,
 	.email > input {
-		width: 20rem;
+		max-width: 25rem;
 	}
 
 	@media (orientation: portrait) {
