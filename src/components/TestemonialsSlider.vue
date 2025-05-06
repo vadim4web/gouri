@@ -1,7 +1,7 @@
 <template>
 	<div class="slider-container">
 		<vueper-slides
-			class="no-shadow"
+			class="no-shadow montserrat"
 			fixed-height
 			:visible-slides="width > height ? 3 : 2"
 			:slide-multiple="width > height ? 3 : 0"
@@ -67,7 +67,6 @@ const { width, height } = useWindowSize()
 .vueperslides {
 	margin: 0 auto;
 	color: white;
-	font-family: 'Montserrat';
 
 	@media (orientation: landscape) {
 		width: 100%;
@@ -105,7 +104,8 @@ const { width, height } = useWindowSize()
 		top: 0;
 		left: 0;
 		content: '”';
-		font-family: 'Angry';
+		font-family: 'Angry', sans-serif;
+		font-display: swap;
 		font-size: 5rem;
 	}
 }

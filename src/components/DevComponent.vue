@@ -1,7 +1,7 @@
 <template>
 	<div class="dev">
 		{{ $t('developer') }}
-		<a href="https://addvision.dev" target="_blank" rel="noopener">AddVision.dev</a>
+		<a href="https://addvision.dev" target="_blank" rel="noopener" class="paprika">AddVision.dev</a>
 	</div>
 </template>
 
@@ -10,10 +10,6 @@
 <style lang="scss">
 .dev a {
 	color: white;
-
-	font-family: 'Paprika', system-ui;
-	font-weight: 400;
-	font-style: normal;
 	z-index: 1;
 
 	position: relative;

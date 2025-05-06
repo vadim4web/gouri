@@ -14,10 +14,10 @@
 						alt="arrow pointing service"
 					/>
 				</span>
-				<span class="service-name">
+				<span class="service-name unbounded">
 					{{ $t(`services_${service}`) }}
 				</span>
-				<span class="service-description">
+				<span class="service-description montserrat">
 					{{ $t(`services_${service}_`) }}
 
 					<request-call v-if="index === 5" />
@@ -81,7 +81,6 @@ import RequestCall from './RequestCall.vue'
 			}
 
 			.service-name {
-				font-family: 'Unbounded';
 				text-transform: none;
 
 				@media (orientation: landscape) {
@@ -94,7 +93,6 @@ import RequestCall from './RequestCall.vue'
 			}
 
 			.service-description {
-				font-family: 'Montserrat';
 				font-size: 1.33rem;
 			}
 

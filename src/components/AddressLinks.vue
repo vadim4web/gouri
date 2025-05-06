@@ -150,7 +150,7 @@
 
 		&:hover,
 		&:active {
-			color: var(--color);
+			color: var(--color-light);
 			transition: color 0.333s;
 
 			svg > g > path:first-of-type {

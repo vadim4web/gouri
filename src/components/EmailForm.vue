@@ -1,5 +1,5 @@
 <template>
-	<form class="email-form" @submit.prevent="submitForm">
+	<form class="email-form montserrat" @submit.prevent="submitForm">
 		<label class="email">
 			<svg
 				width="24"
@@ -102,7 +102,6 @@ const submitForm = async () => {
 
 <style lang="scss" scoped>
 .email-form {
-	font-family: 'Montserrat';
 	display: flex;
 	gap: 0.5rem;
 

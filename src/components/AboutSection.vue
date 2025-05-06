@@ -1,7 +1,7 @@
 <template>
 	<section id="about-us" class="about-section pocket">
 		<div class="flex">
-			<h2 class="about-heading">
+			<h2 class="about-heading unbounded">
 				{{ $t('about_heading') }}
 				<img src="/images/arrow-b-r.png" alt="arrow accenting approach" />
 			</h2>
@@ -50,7 +50,6 @@
 	}
 
 	.about-heading {
-		font-family: 'Unbounded';
 		text-transform: uppercase;
 		max-width: min-content;
 		text-align: left;

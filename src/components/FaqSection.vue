@@ -1,7 +1,7 @@
 <template>
 	<section v-click-outside="handleClickOutside" class="faq-section">
 		<div class="section-wrapper">
-			<h2>
+			<h2 class="unbounded">
 				{{ $t('faq_heading') }}
 			</h2>
 
@@ -88,7 +88,6 @@ const handleClickOutside = () => {
 
 		h2 {
 			font-size: 4rem;
-			font-family: 'Unbounded';
 		}
 
 		.faq {

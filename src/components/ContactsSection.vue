@@ -1,7 +1,7 @@
 <template>
 	<section id="contact-us" class="contact-us-section">
 		<div class="side-a">
-			<h2>
+			<h2 class="unbounded">
 				<img
 					src="/images/arrow-contacts.png"
 					alt="arrow calling to contact us"
@@ -74,7 +74,6 @@ import AddressLinks from './AddressLinks.vue'
 	h2 {
 		text-align: left;
 		text-transform: uppercase;
-		font-family: 'Unbounded';
 		text-wrap: nowrap;
 
 		img {

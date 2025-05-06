@@ -1,5 +1,5 @@
 <template>
-	<section class="head-line">
+	<section class="head-line unbounded">
 		<h2>
 			<span class="part1">
 				{{ $t('services_heading') }}
@@ -15,7 +15,6 @@
 
 <style lang="scss" scoped>
 .head-line {
-	font-family: 'Unbounded';
 	text-transform: uppercase;
 	width: 100%;
 

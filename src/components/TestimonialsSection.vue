@@ -1,6 +1,6 @@
 <template>
 	<section class="testemonials-section">
-		<h2 class="testemonials-heading">
+		<h2 class="testemonials-heading unbounded">
 			<span class="part1" :data-text="$t('testemonials_header')">
 				{{ $t('testemonials_header') }}
 			</span>
@@ -43,7 +43,6 @@ import TestemonialsSlider from './TestemonialsSlider.vue'
 	.testemonials-heading {
 		text-align: left;
 		text-transform: uppercase;
-		font-family: 'Unbounded';
 
 		.part2 {
 			color: var(--color-grey);

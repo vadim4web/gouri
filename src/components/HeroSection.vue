@@ -5,7 +5,7 @@
 
 		<div class="container">
 			<div class="content">
-				<h1 class="hero-headline">
+				<h1 class="hero-headline unbounded">
 					<span class="part1">
 						{{ $t('hero_headline1') }}
 					</span>
@@ -102,7 +102,6 @@ const { width, height } = useWindowSize()
 		}
 
 		h1 {
-			font-family: 'Unbounded';
 			font-weight: 500;
 
 			@media (orientation: portrait) {

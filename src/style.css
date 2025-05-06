@@ -5,9 +5,6 @@
 	src:
 		url('/fonts/Angry.woff2') format('woff2'),
 		/* Modern Browsers */ url('/fonts/Angry.otf') format('opentype'); /* Safari, Android, iOS */
-	font-style: normal;
-	font-weight: normal;
-	text-rendering: optimizeLegibility;
 }
 
 * {
@@ -114,11 +111,31 @@ em {
 	background-color: var(--color-grey);
 }
 
+.angry {
+	font-family: 'Angry', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	text-rendering: optimizeLegibility;
+	font-display: swap;
+}
+
 .unbounded {
 	font-family: 'Unbounded', sans-serif;
 	font-optical-sizing: auto;
 	font-weight: normal;
 	font-style: normal;
+}
+
+.paprika {
+  font-family: 'Paprika', system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat {
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 body {
@@ -135,22 +152,6 @@ body {
 section {
 	display: flex;
 	flex-direction: column;
-}
-
-.pocket {
-	border-bottom-left-radius: 2.5rem;
-	border-bottom-right-radius: 2.5rem;
-}
-
-.sr-only {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	border: 0;
 }
 
 a:link,
@@ -170,3 +171,20 @@ a,
 button {
 	transition: all 333ms;
 }
+
+.pocket {
+	border-bottom-left-radius: 2.5rem;
+	border-bottom-right-radius: 2.5rem;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+

@@ -1,19 +1,19 @@
 <template>
 	<section class="three-blocks">
-		<h2>
+		<h2 class="unbounded">
 			{{ $t('three_blocks_heading') }}
 		</h2>
 		<div class="blocks">
 			<div v-for="(block, index) in 3" :key="index" class="block">
-				<span class="block-number">
+				<span class="block-number angry">
 					{{ '0' + (index + 1) }}
 				</span>
 
-				<h3 class="block-heading">
+				<h3 class="block-heading montserrat">
 					{{ $t(`three_blocks_${block}`) }}
 				</h3>
 
-				<p class="block-text">
+				<p class="block-text montserrat">
 					{{ $t(`three_blocks_${block}_`) }}
 				</p>
 			</div>
@@ -36,7 +36,6 @@
 	}
 
 	h2 {
-		font-family: 'Unbounded';
 		font-size: 2rem;
 		margin-bottom: 1rem;
 
@@ -88,20 +87,17 @@
 
 			.block-number {
 				color: var(--color);
-				font-family: 'Angry';
 				font-size: 1.5rem;
 			}
 
 			.block-heading {
 				font-size: 1.75rem;
-				font-family: 'Montserrat', sans-serif;
 				line-height: 1.5;
 			}
 
 			.block-text {
 				line-height: 1.4;
 				font-size: 1.25rem;
-				font-family: 'Montserrat', sans-serif;
 				color: var(--color-dimmed);
 				font-weight: 500;
 			}
