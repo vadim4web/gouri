@@ -25,13 +25,13 @@
 				type="email"
 				required
 				:placeholder="$t('email_placeholder')"
-				autocomplete="email"
+				autocomplete="mail"
 			/>
 		</label>
-
 		<label class="submit">
 			<button type="submit">
 				{{ $t('submitText') }}
+
 				<span>
 					<svg
 						width="20"
@@ -107,7 +107,7 @@ const submitForm = async () => {
 	gap: 0.5rem;
 
 	.email,
-	#submit {
+	.submit > button {
 		border-radius: 2.5rem;
 
 		padding-left: 1.5rem;
