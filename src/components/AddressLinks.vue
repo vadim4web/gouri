@@ -34,7 +34,7 @@
 			</a>
 		</li>
 		<li class="address-links-item">
-			<a href="mailto:">
+			<a href="mailto:gouri@wp.pl">
 				<svg
 					width="40"
 					height="41"
@@ -110,7 +110,8 @@
 					</defs>
 				</svg>
 
-				<span class="link-text">123 Business Road, Suite 456, City, State, ZIP Code</span>
+				<!-- <span class="link-text">123 Business Road, Suite 456, City, State, ZIP Code</span> -->
+				<span class="link-text">Gdańska 117/3D, 85-022 Bydgoszcz, Poland</span>
 			</a>
 		</li>
 	</ul>

@@ -2,6 +2,8 @@ import { createI18n } from 'vue-i18n'
 
 const messages = {
 	ru: {
+		pageTitle: 'Юридическая помощь в Польше — GOURI',
+
 		services: 'услуги',
 		aboutUs: 'о нас',
 		contactUs: 'контакты',
@@ -136,6 +138,8 @@ const messages = {
 		developer: 'Разработка: ',
 	},
 	uk: {
+		pageTitle: 'Юридична допомога в Польщі — GOURI',
+
 		services: 'послуги',
 		aboutUs: 'про нас',
 		contactUs: 'контакти',

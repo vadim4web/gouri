@@ -18,9 +18,12 @@
 import { onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 
-const setLocale = lang => (locale.value = lang)
+const setLocale = lang => {
+	locale.value = lang
+	document.title = t('pageTitle')
+}
 
 onMounted(() => {
 	const browserLang = navigator.language || navigator.userLanguage

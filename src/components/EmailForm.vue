@@ -1,6 +1,6 @@
 <template>
 	<form class="email-form" @submit.prevent="submitForm">
-		<label for="email" class="email">
+		<label class="email">
 			<svg
 				width="24"
 				height="24"
@@ -21,18 +21,17 @@
 				/>
 			</svg>
 			<input
-				id="email"
 				v-model="email"
 				type="email"
 				required
 				:placeholder="$t('email_placeholder')"
-				autocomplete="mail"
+				autocomplete="email"
 			/>
 		</label>
-		<label for="submit" class="submit">
-			<button id="submit" type="submit">
-				{{ $t('submitText') }}
 
+		<label class="submit">
+			<button type="submit">
+				{{ $t('submitText') }}
 				<span>
 					<svg
 						width="20"
