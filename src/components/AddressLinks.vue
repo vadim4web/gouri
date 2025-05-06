@@ -1,7 +1,7 @@
 <template>
 	<ul class="address-links">
 		<li class="address-links-item">
-			<a href="tel:+48793337695">
+			<a href="tel:+48793337695" target="_blank" rel="noopener noreferrer">
 				<svg
 					width="40"
 					height="41"
@@ -34,7 +34,7 @@
 			</a>
 		</li>
 		<li class="address-links-item">
-			<a href="mailto:gouri@wp.pl">
+			<a href="mailto:gouri@wp.pl" target="_blank" rel="noopener noreferrer">
 				<svg
 					width="40"
 					height="41"
@@ -70,7 +70,11 @@
 			</a>
 		</li>
 		<li class="address-links-item">
-			<a href="">
+			<a
+				href="https://aleo.com/pl/firma/gouri-kira-bohuslava"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
 				<svg
 					width="40"
 					height="41"
@@ -142,6 +146,17 @@
 			width: 3.5rem;
 			height: 3.5rem;
 			flex-shrink: 0;
+		}
+
+		&:hover,
+		&:active {
+			color: var(--color);
+			transition: color 0.333s;
+
+			svg > g > path:first-of-type {
+				fill: var(--color-light);
+				transition: fill 0.333s;
+			}
 		}
 	}
 }
