@@ -120,7 +120,7 @@ const submitForm = async () => {
 		background: white;
 		padding-right: 1.5rem;
 		padding-block: 1rem;
-		font-size: 0.75rem;
+		font-size: 1rem;
 
 		svg {
 			width: 1.5rem;
@@ -166,7 +166,7 @@ const submitForm = async () => {
 
 		.email,
 		.email > input {
-			width: 100%;
+			width: 25rem;
 		}
 	}
 

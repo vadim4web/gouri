@@ -54,6 +54,7 @@ import AddressLinks from './AddressLinks.vue'
 	color: white;
 	position: relative;
 	gap: 5rem;
+	margin-bottom: -2px;
 
 	@media (orientation: landscape) {
 		padding: 5rem 7.5rem 7.5rem;

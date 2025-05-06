@@ -17,8 +17,8 @@
 	&:active {
 		color: var(--color-light);
 		text-shadow: 0 0 0.05rem var(--color50);
-		border-color: var(--color50);
 		box-shadow: inset 0 0 0.5rem var(--color50);
+		border-color: var(--color50);
 	}
 }
 </style>

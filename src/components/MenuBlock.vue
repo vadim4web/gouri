@@ -85,8 +85,8 @@ const closeMenu = () => (isMenuOpen.value = false)
 		cursor: pointer;
 
 		svg {
-			width: 2.5rem;
-			height: 2.5rem;
+			width: 3.5rem;
+			height: 3.5rem;
 		}
 
 		.close:hover path {

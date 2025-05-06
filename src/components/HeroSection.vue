@@ -69,7 +69,7 @@ const { width, height } = useWindowSize()
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	max-width: 63vw;
+	
 	padding: 0 1rem;
 
 	overflow-x: hidden;
@@ -77,12 +77,14 @@ const { width, height } = useWindowSize()
 	@media (orientation: landscape) {
 		height: calc(85dvh - 5.5rem);
 		padding: 0 0 0 7.5rem;
+		max-width: 75%;
 	}
 
 	@media (orientation: portrait) {
 		height: 60dvh;
 		flex-direction: column;
 		width: 30rem;
+		max-width: 85%;
 		margin: 0 auto;
 	}
 

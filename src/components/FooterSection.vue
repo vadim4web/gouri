@@ -30,18 +30,7 @@ const currentURL = computed(
 	align-items: center;
 	justify-content: space-between;
 	color: white;
-
 	gap: 2.5rem;
-
-	&::after {
-		position: absolute;
-		width: 100%;
-		height: 0.5rem;
-		content: '';
-		bottom: -0.5rem;
-		left: 0;
-		background: var(--color-footer);
-	}
 
 	@media (orientation: landscape) {
 		flex-direction: row;
