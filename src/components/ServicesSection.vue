@@ -11,7 +11,9 @@
 					<img
 						v-if="index !== 5"
 						src="/images/arrow-b-r.svg"
-						alt="arrow pointing service"
+						:alt="'arrow pointing service ' + index"
+						width="108"
+						height="108"
 					/>
 				</span>
 				<span class="service-name unbounded">
@@ -52,6 +54,11 @@ import RequestCall from './RequestCall.vue'
 			border-style: solid;
 			border-width: 0 0 2px;
 			border-color: white;
+
+			img {
+				width: 1.5rem;
+				height: 1.5rem;
+			}
 
 			@media (orientation: landscape) {
 				& {

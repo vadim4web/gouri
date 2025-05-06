@@ -19,6 +19,8 @@
 		<img
 			src="/images/symbol.webp"
 			alt="company spirit incapsulated in an image"
+			width="558"
+			height="706"
 			class="navigation-mobile-image"
 		/>
 

@@ -1,7 +1,7 @@
 <template>
 	<section id="about-us" class="about-section pocket">
 		<div class="flex">
-			<h2 class="about-heading unbounded">
+			<h2 class="about-heading">
 				{{ $t('about_heading') }}
 				<img src="/images/arrow-b-r.png" alt="arrow accenting approach" />
 			</h2>
@@ -50,6 +50,7 @@
 	}
 
 	.about-heading {
+
 		text-transform: uppercase;
 		max-width: min-content;
 		text-align: left;
@@ -66,7 +67,7 @@
 		img {
 			aspect-ratio: 1;
 			position: absolute;
-			top: 0;
+			top: 0.33ch;
 			right: 0;
 			width: 1.5ch;
 		}
