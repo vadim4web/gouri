@@ -31,8 +31,6 @@
 		background: var(--color);
 		display: inline-block;
 		align-self: center;
-
-
 	}
 
 	.logo-span {
@@ -44,13 +42,12 @@
 		position: relative;
 		top: 0.25em;
 
-		font-family: "Satisfy", cursive;
+		font-family: 'Satisfy', cursive;
 		font-weight: 400;
 		font-style: normal;
 
 		font-size: 3rem;
 		transform: translateY(-0.25rem);
-
 	}
 
 	.logo-span:hover {

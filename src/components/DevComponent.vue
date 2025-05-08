@@ -16,7 +16,8 @@
 		color: white;
 	}
 
-	&,  * {
+	&,
+	* {
 		transition: color 333ms;
 	}
 

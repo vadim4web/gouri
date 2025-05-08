@@ -52,7 +52,6 @@
 	}
 
 	.about-heading {
-
 		text-transform: uppercase;
 		max-width: min-content;
 		text-align: left;
