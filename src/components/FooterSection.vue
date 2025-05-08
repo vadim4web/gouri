@@ -54,13 +54,5 @@ const currentURL = computed(
 	.logo-span {
 		font-size: 2.5rem;
 	}
-
-	@media (orientation: landscape) {
-		transform: translateY(0.33rem);
-	}
-
-	@media (orientation: portrait) {
-		transform: translateY(0.66rem);
-	}
 }
 </style>
