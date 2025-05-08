@@ -82,7 +82,7 @@ const { width, height } = useWindowSize()
 	@media (orientation: landscape) {
 		height: calc(85dvh - 5.5rem);
 		padding: 0 0 0 7.5rem;
-		max-width: 75%;
+		max-width: max(55vw, 85ch);
 	}
 
 	@media (orientation: portrait) {
