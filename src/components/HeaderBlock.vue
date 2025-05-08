@@ -1,6 +1,6 @@
 <template>
 	<header class="header">
-		<logo-component class="header-logo"> GOURI </logo-component>
+		<logo-component class="header-logo"> Gouri </logo-component>
 
 		<navigation-list />
 	</header>
@@ -31,27 +31,6 @@ import NavigationList from './NavigationList.vue'
 
 	& > * {
 		width: 100%;
-	}
-}
-
-.header .header-logo.logo-box {
-	display: flex;
-
-	flex-direction: column;
-
-	align-items: center;
-	justify-content: center;
-	font-size: 1.5rem;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	min-width: max-content;
-
-	margin: -1rem 0;
-	transform: translateY(0.36rem);
-
-	img {
-		width: 3.5rem;
-		aspect-ratio: 1;
-		margin: -0.75rem 0;
 	}
 }
 </style>

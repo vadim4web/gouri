@@ -1,6 +1,6 @@
 <template>
 	<footer class="footer-section">
-		<logo-component class="footer-logo"> GOURI </logo-component>
+		<logo-component class="footer-logo"> Gouri </logo-component>
 
 		<div class="footer-copy">
 			{{ $t('copyright') }} &copy; 2018 - {{ new Date().getFullYear() }}
@@ -48,13 +48,11 @@ const currentURL = computed(
 }
 
 .footer-section .footer-logo.logo-box {
-	display: flex;
-	gap: 0.5rem;
-	align-items: center;
-	justify-content: center;
 	font-size: 1.75rem;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	min-width: max-content;
+
+	.logo-span {
+		font-size: 2.5rem;
+	}
 
 	@media (orientation: landscape) {
 		transform: translateY(0.33rem);
@@ -62,16 +60,6 @@ const currentURL = computed(
 
 	@media (orientation: portrait) {
 		transform: translateY(0.66rem);
-	}
-
-	img {
-		width: 3.5rem;
-		aspect-ratio: 1;
-	}
-
-	.logo-span {
-		position: relative;
-		top: 0.125em;
 	}
 }
 </style>

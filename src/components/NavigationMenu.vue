@@ -69,10 +69,11 @@ const delayedClose = () => setTimeout(() => closeMenu(), 333)
 }
 
 .navigation-mobile-image {
-	transform: scale(0.66) translate(-1rem, -5svh);
 	margin-bottom: -10%;
 	filter: drop-shadow(0 0 1rem var(--color));
 	margin: -2.5rem;
+	height: calc((100vh - 5rem) / 5);
+	width: calc((100vh - 5rem) / 5 / 19 * 15);
 }
 
 .navigation-mobile-menu {

@@ -146,21 +146,22 @@ import AddressLinks from './AddressLinks.vue'
 
 		@media (orientation: landscape) {
 			gap: 5rem;
+
+			.email-form {
+				flex-direction: column;
+			}
 		}
 
 		@media (orientation: landscape) and (max-width: 1399px) {
 			.email-form {
 				flex-wrap: wrap;
+				flex-direction: column;
 			}
 		}
 
 		@media (orientation: portrait) {
 			gap: 2.5rem;
 		}
-	}
-
-	.email-form .email {
-		max-width: 100%;
 	}
 }
 </style>

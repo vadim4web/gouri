@@ -1,6 +1,6 @@
 <template>
 	<header class="header-mobile" :class="isMenuOpen ? 'bg-white' : ''">
-		<logo-component class="header-logo"> GOURI </logo-component>
+		<logo-component class="header-logo"> Gouri </logo-component>
 
 		<button
 			class="menu-toggle"
@@ -101,22 +101,30 @@ const closeMenu = () => (isMenuOpen.value = false)
 
 .header-mobile .header-logo.logo-box {
 	display: flex;
-
-	flex-direction: column;
-
+	gap: 0.5rem;
 	align-items: center;
 	justify-content: center;
-	font-size: 1.5rem;
+	font-size: 1.75rem;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	min-width: max-content;
+	margin-top: -1rem;
 
-	margin: -1rem 0;
-	transform: translateY(0.36rem);
+	@media (orientation: landscape) {
+		transform: translateY(0.33rem);
+	}
 
-	img {
+	@media (orientation: portrait) {
+		transform: translateY(0.66rem);
+	}
+
+	.shri {
 		width: 3.5rem;
 		aspect-ratio: 1;
-		margin: -0.75rem 0;
+	}
+
+	.logo-span {
+		position: relative;
+		top: 0.125em;
 	}
 }
 </style>
