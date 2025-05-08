@@ -13,6 +13,7 @@
 	/*
   transform: scale(1.33) translate(0, 50%) !important;
   background: white; */
+
 	.shri {
 		font-size: 3rem;
 		border: 3px solid black;
@@ -20,7 +21,8 @@
 		line-height: 3rem;
 		color: white;
 		text-shadow: 0 0 3px var(--color);
-		background: var(--color50);
+		background: var(--color);
+		display: inline-block;
 	}
 	.logo-span {
 		transition:

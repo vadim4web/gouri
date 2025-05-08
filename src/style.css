@@ -138,6 +138,11 @@ em {
   font-style: normal;
 }
 
+.seo {
+	position: absolute;
+	visibility: hidden;
+}
+
 body {
 	margin: 0;
 	min-width: 320px;

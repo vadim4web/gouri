@@ -6,6 +6,9 @@
 		<div class="container">
 			<div class="content">
 				<h1 class="hero-headline unbounded">
+					<span class="seo">
+						Юридическая помощь в Польше — GOURI
+					</span>
 					<span class="part1">
 						{{ $t('hero_headline1') }}
 					</span>

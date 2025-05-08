@@ -1,7 +1,7 @@
 <template>
 	<div class="dev">
 		{{ $t('developer') }}
-		<a href="https://addvision.dev" target="_blank" rel="noopener">AddVision.dev</a>
+		<a href="https://addvision.dev" target="_blank" rel="noopener">{<em>add</em>}<strong>VISION</strong></a>
 	</div>
 </template>
 
@@ -9,24 +9,24 @@
 
 <style lang="scss">
 .dev a {
-	color: white;
-	z-index: 1;
+	color: var(--color);
 
-	position: relative;
-	&::after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 3px;
-		background: #d1493a;
-		transition: height 333ms;
-		z-index: -1;
+	em,
+	strong {
+		color: white;
 	}
 
-	&:hover::after {
-		height: 100%;
+	&,  * {
+		transition: color 333ms;
+	}
+
+	&:hover {
+		color: white;
+
+		em,
+		strong {
+			color: var(--color);
+		}
 	}
 }
 </style>
