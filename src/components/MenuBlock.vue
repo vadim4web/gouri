@@ -116,15 +116,5 @@ const closeMenu = () => (isMenuOpen.value = false)
 	@media (orientation: portrait) {
 		transform: translateY(0.66rem);
 	}
-
-	.shri {
-		width: 3.5rem;
-		aspect-ratio: 1;
-	}
-
-	.logo-span {
-		position: relative;
-		top: 0.125em;
-	}
 }
 </style>

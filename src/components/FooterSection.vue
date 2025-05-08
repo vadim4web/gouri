@@ -31,6 +31,7 @@ const currentURL = computed(
 	justify-content: space-between;
 	color: white;
 	gap: 2.5rem;
+	font-size: 1.25rem;
 
 	@media (orientation: landscape) {
 		flex-direction: row;

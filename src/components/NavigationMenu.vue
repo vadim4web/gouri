@@ -95,6 +95,7 @@ const delayedClose = () => setTimeout(() => closeMenu(), 333)
 	position: relative;
 	color: white;
 	font-weight: 500;
+	font-size: 1.25rem;
 
 	display: flex;
 	flex-direction: column;

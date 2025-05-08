@@ -248,7 +248,7 @@
 		}
 
 		&:last-child {
-			margin-bottom: -1px;
+			margin-bottom: -1.5px;
 			border-radius: 50%;
 			width: 3.5rem;
 			height: 3.5rem;
