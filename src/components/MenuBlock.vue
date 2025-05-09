@@ -74,6 +74,7 @@ const closeMenu = () => (isMenuOpen.value = false)
 	height: 5.5rem !important;
 	font-weight: bold;
 	position: relative;
+	z-index: 5;
 
 	&.bg-white {
 		background: white;

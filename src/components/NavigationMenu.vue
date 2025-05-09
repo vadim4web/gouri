@@ -1,5 +1,6 @@
 <template>
 	<nav class="navigation-mobile">
+		<div></div>
 		<menu class="navigation-mobile-menu">
 			<li class="navigation-mobile-menu-item">
 				<a href="#services" @click="delayedClose()">{{ $t('services') }}</a>
@@ -53,17 +54,18 @@ const delayedClose = () => setTimeout(() => closeMenu(), 333)
 <style lang="scss">
 .navigation-mobile {
 	position: absolute;
-	z-index: 10;
+	z-index: -1;
 	bottom: 0;
+	top: 0;
 	left: 0;
 	right: 0;
-	height: calc(100dvh - 5rem);
+	height: 100dvh;
 	width: 100%;
 	overflow: hidden;
-	transform: translateY(calc(100vh - 5rem));
+	transform: translateY(0);
 	background: white;
 	display: grid;
-	grid-template-rows: 5fr 2fr 2fr 3fr 3fr;
+	grid-template-rows: 5rem 5fr 2fr 2fr 3fr 3fr;
 	align-content: center;
 	justify-items: center;
 }
