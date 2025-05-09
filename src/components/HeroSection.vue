@@ -20,15 +20,16 @@
 				</p>
 				<email-form />
 			</div>
+
+			<img
+				src="/images/symbol.webp"
+				alt="company spirit incapsulated in an image"
+				class="hero-image"
+				width="558"
+				height="706"
+			/>
 		</div>
 
-		<img
-			src="/images/symbol.webp"
-			alt="company spirit incapsulated in an image"
-			class="hero-image"
-			width="558"
-			height="706"
-		/>
 	</section>
 </template>
 
@@ -46,21 +47,26 @@ const { width, height } = useWindowSize()
 	background: linear-gradient(180deg, #fff, var(--color-red-gray));
 	height: 87.5dvh;
 	position: relative;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 .hero-image {
 	filter: drop-shadow(0 0 1rem var(--color));
 	aspect-ratio: 558 / 706;
 	object-fit: contain;
-	position: absolute;
+
 
 	@media (orientation: landscape) {
 		height: 50dvh;
 		bottom: 12.5dvh;
-		right: 5rem;
+		right: 0;
+		left: 33vw;
 	}
 
 	@media (orientation: portrait) {
+		position: absolute;
 		height: 30dvh;
 		bottom: -11.5dvh;
 		left: 50%;
@@ -69,23 +75,31 @@ const { width, height } = useWindowSize()
 }
 
 .container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
 	padding: 0 1rem;
 
 	overflow-x: hidden;
 
 	@media (orientation: landscape) {
 		height: calc(85dvh - 5.5rem);
-		padding: 0 0 0 7.5rem;
-		max-width: max(55vw, 85ch);
+		padding: 0 7.5rem;
+		display: grid;
+		align-content: center;
+		justify-items: center;
+		place-items: center;
+		grid-template-columns: 2fr 1fr;
+	}
+
+	@media (orientation: landscape) and (max-width: 720px) {
+		padding: 0 3rem;
+		grid-template-columns: 5fr 2fr;
 	}
 
 	@media (orientation: portrait) {
-		height: 60dvh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		flex-direction: column;
+		height: 60dvh;
 		width: 30rem;
 		max-width: 85%;
 		margin: 0 auto;

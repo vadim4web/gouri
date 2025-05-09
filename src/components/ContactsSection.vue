@@ -64,7 +64,7 @@ import AddressLinks from './AddressLinks.vue'
 		width: 100%;
 	}
 
-	@media (orientation: portrait) {
+	@media (orientation: portrait) or (max-width: 720px) {
 		padding: 5rem 1rem;
 
 		display: flex;

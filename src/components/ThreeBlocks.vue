@@ -85,6 +85,14 @@
 				height: 25rem;
 			}
 
+			@media (orientation: landscape) and (max-width: 720px) {
+				display: grid;
+				grid-template-rows: 1.5fr 1fr;
+				 * {
+					text-overflow: ellipsis;
+				 }
+			}
+
 			.block-number {
 				color: var(--color);
 				font-size: 1.5rem;
@@ -100,6 +108,11 @@
 				font-size: 1.25rem;
 				color: var(--color-dimmed);
 				font-weight: 500;
+
+				@media (orientation: landscape) and (max-width: 720px) {
+					height: 7rem;
+					overflow: hidden;
+				}
 			}
 		}
 	}
