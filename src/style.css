@@ -98,17 +98,17 @@ em {
 	width: 0.5rem;
 }
 ::-webkit-scrollbar-thumb {
-	background-color: var(--color-gray-a);
+	background: var(--color-gray-a);
 	border-radius: 0.25rem;
 }
 ::-webkit-scrollbar-thumb:hover {
-	background-color: var(--color-gray);
+	background: var(--color-gray);
 }
 ::-webkit-scrollbar-track {
-	background-color: var(--color-grey-a);
+	background: var(--color-grey-a);
 }
 ::-webkit-scrollbar-track:hover {
-	background-color: var(--color-grey);
+	background: var(--color-grey);
 }
 
 body {

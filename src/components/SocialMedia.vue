@@ -252,12 +252,22 @@
 			border-radius: 50%;
 			width: 3.5rem;
 			height: 3.5rem;
+			position: relative;
 
 			svg {
 				transform: scale(1.1);
+				border-radius: 50%;
+			}
+
+			&::before {
+				position: absolute;
+				content: '';
+				width: 3rem;
+				height: 3rem;
+				left: 0.25rem;
+				top: 0.25rem;
 				background: white;
 				border-radius: 50%;
-				position: relative;
 			}
 		}
 	}
