@@ -9,4 +9,3 @@ Disallow: /*.php$
 Allow: /
 
 Sitemap: https://gouri.com.pl/sitemap.xml
-Host: gouri.com.pl
