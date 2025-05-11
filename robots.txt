@@ -1,11 +1,4 @@
 User-agent: *
-Disallow: /admin/
-Disallow: /login/
-Disallow: /tmp/
-Disallow: /private/
-Disallow: /cgi-bin/
-Disallow: /*?*
-Disallow: /*.php$
 Allow: /
 
 Sitemap: https://gouri.com.pl/sitemap.xml
