@@ -29,6 +29,7 @@ import CallButton from './CallButton.vue'
 	grid-template-columns: 6.5fr 2fr 3.5fr;
 	align-content: center;
 	justify-items: center;
+	font-size: 1.5rem;
 }
 .navigation-menu {
 	width: 100%;

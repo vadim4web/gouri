@@ -8,22 +8,22 @@ export default defineConfig({
     vue(),
 
     // ⚙️ Генерація критичного CSS після білду
-    critical({
-      criticalUrl: 'https://gouri.com.pl/',
-      criticalBase: 'dist/',
-      criticalPages: [
-        { uri: '', template: 'index' },
-      ],
-      criticalConfig: {
-        inline: true,
-        extract: false,
-        width: 375,
-        height: 812,
-        penthouse: {
-          blockJSRequests: false,
-        },
-      },
-    }),
+    // critical({
+    //   criticalUrl: 'https://gouri.com.pl/',
+    //   criticalBase: 'dist/',
+    //   criticalPages: [
+    //     { uri: '', template: 'index' },
+    //   ],
+    //   criticalConfig: {
+    //     inline: true,
+    //     extract: false,
+    //     width: 375,
+    //     height: 812,
+    //     penthouse: {
+    //       blockJSRequests: false,
+    //     },
+    //   },
+    // }),
   ],
   resolve: {
     alias: {

@@ -70,8 +70,9 @@
 			</a>
 		</li>
 		<li class="address-links-item">
+			<!-- href="https://aleo.com/pl/firma/gouri-kira-bohuslava" -->
 			<a
-				href="https://aleo.com/pl/firma/gouri-kira-bohuslava"
+				href="https://maps.app.goo.gl/nDDVZ8Xu9GKBV1wv5"
 				target="_blank"
 				rel="noopener noreferrer"
 			>
@@ -115,7 +116,8 @@
 				</svg>
 
 				<!-- <span class="link-text">123 Business Road, Suite 456, City, State, ZIP Code</span> -->
-				<span class="link-text">Gdańska 117/3D, 85-022 Bydgoszcz, Poland</span>
+				<!-- <span class="link-text">Gdańska 117/3D, 85-022 Bydgoszcz, Poland</span> -->
+				<span class="link-text">85-022 Bydgoszcz, Poland</span>
 			</a>
 		</li>
 	</ul>

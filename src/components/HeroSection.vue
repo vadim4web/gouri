@@ -9,6 +9,10 @@
 					<span class="seo"> Юридическая помощь в Польше — GOURI </span>
 					<span class="part1">
 						{{ $t('hero_headline1') }}
+						<span class="law">
+							{{ $t('hero_headline1_') }}
+						</span>
+						{{ $t('hero_headline1__') }}
 					</span>
 					<br />
 					<span class="part2">
@@ -77,8 +81,6 @@ const { width, height } = useWindowSize()
 .container {
 	padding: 0 1rem;
 
-	overflow-x: hidden;
-
 	@media (orientation: landscape) {
 		height: calc(85dvh - 5.5rem);
 		padding: 0 7.5rem;
@@ -106,13 +108,11 @@ const { width, height } = useWindowSize()
 	}
 
 	.content {
-		text-align: left;
 		display: flex;
 		flex-direction: column;
 		gap: 3rem;
 
 		max-width: 100vw;
-		overflow-x: hidden;
 
 		@media (orientation: portrait) {
 			gap: 2.5rem;
@@ -130,11 +130,38 @@ const { width, height } = useWindowSize()
 			}
 
 			.part1 {
+				text-align: left;
 				color: var(--color);
+
+				.law {
+					position: relative;
+					display: inline-block;
+
+					&::before {
+						position: absolute;
+						content: '';
+						background: url('/images/law.png');
+						background-position: center;
+						background-size: contain;
+						background-repeat: no-repeat;
+						width: 100%;
+						aspect-ratio: 1;
+						top: 0;
+						bottom: 0;
+						transform: scale(1.5) translateY(-75%);
+						z-index: 1;
+					}
+				}
+			}
+
+			.part2 {
+				display: inline-block;
+				text-align: center !important;
 			}
 		}
 
 		p {
+			text-align: left;
 			font-size: 1.25rem;
 		}
 	}

@@ -109,6 +109,7 @@
 
 		.emphesize {
 			font-weight: bolder;
+			display: block;
 		}
 	}
 }

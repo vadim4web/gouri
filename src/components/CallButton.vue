@@ -5,13 +5,16 @@
 <script setup></script>
 
 <style lang="scss" scoped>
+.navigation-mobile .call-button {
+	height: 4.5rem;
+}
+
 .call-button {
 	border: 1px solid var(--color);
 	color: var(--color);
 	border-radius: 100vh;
 	min-width: fit-content;
 	padding: 1rem 1.75rem;
-	height: 3.5rem;
 
 	&:hover,
 	&:active {

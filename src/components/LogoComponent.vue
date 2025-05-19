@@ -15,7 +15,7 @@
   background: white; */
 	display: flex;
 	align-items: center;
-	gap: 0.33rem;
+	gap: 1rem;
 
 	.shri {
 		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -40,11 +40,16 @@
 
 		line-height: 5rem;
 		position: relative;
-		top: 0.25em;
+		top: 0.125em;
 
 		font-family: 'Satisfy', cursive;
+
 		font-weight: 400;
 		font-style: normal;
+
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+		text-transform: uppercase;
 
 		font-size: 3rem;
 		transform: translateY(-0.25rem);

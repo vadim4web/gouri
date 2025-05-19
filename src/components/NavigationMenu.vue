@@ -68,6 +68,7 @@ const delayedClose = () => setTimeout(() => closeMenu(), 333)
 	grid-template-rows: 5rem 5fr 2fr 2fr 3fr 3fr;
 	align-content: center;
 	justify-items: center;
+	font-size: 1.5rem;
 }
 
 .navigation-mobile-image {

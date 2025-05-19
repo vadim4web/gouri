@@ -23,10 +23,13 @@ const { locale, t } = useI18n()
 const setLocale = lang => {
 	locale.value = lang
 	document.title = t('pageTitle')
+	sessionStorage.setItem('lang', lang)
 }
 
 onMounted(() => {
-	const browserLang = navigator.language || navigator.userLanguage
+	const browserLang = sessionStorage.getItem('lang')
+		? sessionStorage.getItem('lang')
+		: navigator.language || navigator.userLanguage
 
 	if (
 		browserLang.toLowerCase().startsWith('uk') ||
