@@ -144,12 +144,21 @@ const { width, height } = useWindowSize()
 						background-position: center;
 						background-size: contain;
 						background-repeat: no-repeat;
-						width: 100%;
+						width: 5rem;
 						aspect-ratio: 1;
 						top: 0;
+						left: 50%;
 						bottom: 0;
-						transform: scale(1.5) translateY(-75%);
+						transform: scale(1.5) translate(-33%, -75%);
 						z-index: 1;
+					}
+
+					@media (orientation: portrait) {
+						&::before {
+							width: 3.5rem;
+							left: 0;
+							transform: scale(1.5) translate(1rem, -75%);
+						}
 					}
 				}
 			}

@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
-import critical from 'rollup-plugin-critical'
+// import critical from 'rollup-plugin-critical'
 
 export default defineConfig({
   plugins: [
