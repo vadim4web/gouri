@@ -30,6 +30,10 @@ import CallButton from './CallButton.vue'
 	align-content: center;
 	justify-items: center;
 	font-size: 1.5rem;
+
+	@media (max-width: 720px) {
+		font-size: 1.25rem;
+	}
 }
 .navigation-menu {
 	width: 100%;

@@ -144,12 +144,12 @@ const { width, height } = useWindowSize()
 						background-position: center;
 						background-size: contain;
 						background-repeat: no-repeat;
-						width: 5rem;
+						width: min(5rem, 9vmin);
 						aspect-ratio: 1;
 						top: 0;
 						left: 50%;
 						bottom: 0;
-						transform: scale(1.5) translate(-33%, -75%);
+						transform: scale(1.5) translate(-33%, max(-75%, -7vmin));
 						z-index: 1;
 					}
 

@@ -16,6 +16,10 @@
 	min-width: fit-content;
 	padding: 1rem 1.75rem;
 
+	@media (max-width: 720px) {
+		font-size: 1rem;
+	}
+
 	&:hover,
 	&:active {
 		color: var(--color-light);

@@ -14,6 +14,7 @@
 				required
 				aria-label="phone-input"
 				pattern="^\+48 \d{2} \d{3} \d{4}$"
+				maxlength="15"
 				@focus="prependCountryCode"
 				@input="restrictPhoneInput"
 				@blur="clearIfOnlyPrepender"
