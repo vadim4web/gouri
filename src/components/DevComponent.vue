@@ -1,7 +1,7 @@
 <template>
 	<div class="dev">
 		{{ $t('developer') }}
-		<a href="https://addvision.dev" target="_blank" rel="noopener">{<em>Add</em>}<strong>VISION</strong></a>
+		<a href="https://addvision.dev" target="_blank" rel="noopener">{<em>add</em>}<strong>VISION</strong></a>
 	</div>
 </template>
 

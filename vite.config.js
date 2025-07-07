@@ -6,7 +6,6 @@ import path from 'path'
 export default defineConfig({
   plugins: [
     vue(),
-
     // ⚙️ Генерація критичного CSS після білду
     // critical({
     //   criticalUrl: 'https://gouri.com.pl/',
