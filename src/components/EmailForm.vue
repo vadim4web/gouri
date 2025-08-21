@@ -25,7 +25,7 @@
 				type="email"
 				required
 				:placeholder="$t('email_placeholder')"
-				autocomplete="mail"
+				autocomplete="email"
 			/>
 		</label>
 		<label class="submit">
@@ -60,9 +60,11 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import emailjs from '@emailjs/browser'
+import { ref, inject } from 'vue'
 import { useI18n } from 'vue-i18n'
+import emailjs from '@emailjs/browser'
+
+const { trigger } = inject("thankYou")
 
 const { locale } = useI18n()
 
@@ -72,7 +74,7 @@ const USER_KEY = import.meta.env.VITE_EMAILJS_USER_KEY
 
 const email = ref('')
 
-const submitForm = async () => {
+const submitForm = async (e) => {
 	const text = `
         Lang: ${locale.value}
         Email: ${email.value}
@@ -92,11 +94,12 @@ const submitForm = async () => {
 			}
 		)
 		console.log('Email sent successfully!', response)
+		trigger("email")
+    e.target.reset()
 	} catch (error) {
 		console.error('Error sending email:', error)
+		trigger("error")
 	}
-
-	email.value = ''
 }
 </script>
 

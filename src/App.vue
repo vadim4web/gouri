@@ -1,4 +1,6 @@
 <script setup>
+import { ref, provide } from "vue"
+
 import HeroSection from '~/components/HeroSection.vue'
 import ThreeBlocks from '~/components/ThreeBlocks.vue'
 import HeadLine from '~/components/HeadLine.vue'
@@ -8,6 +10,17 @@ import TestimonialsSection from '~/components/TestimonialsSection.vue'
 import FaqSection from '~/components/FaqSection.vue'
 import ContactsSection from '~/components/ContactsSection.vue'
 import FooterSection from '~/components/FooterSection.vue'
+import ThankYou from '~/components/ThankYou.vue'
+
+// global reactive state
+const sentEvent = ref(null)
+
+function trigger(type) {
+  sentEvent.value = type
+  setTimeout(() => (sentEvent.value = null), 5000)
+}
+
+provide("thankYou", { sentEvent, trigger })
 </script>
 
 <template>
@@ -20,4 +33,5 @@ import FooterSection from '~/components/FooterSection.vue'
 	<faq-section />
 	<contacts-section />
 	<footer-section />
+	<thank-you />
 </template>
