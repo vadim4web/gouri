@@ -88,9 +88,9 @@
 			@media (orientation: landscape) and (max-width: 720px) {
 				display: grid;
 				grid-template-rows: 1.5fr 1fr;
-				 * {
+				* {
 					text-overflow: ellipsis;
-				 }
+				}
 			}
 
 			.block-number {

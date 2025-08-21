@@ -33,7 +33,6 @@
 				height="706"
 			/>
 		</div>
-
 	</section>
 </template>
 
@@ -60,7 +59,6 @@ const { width, height } = useWindowSize()
 	filter: drop-shadow(0 0 1rem var(--color));
 	aspect-ratio: 558 / 706;
 	object-fit: contain;
-
 
 	@media (orientation: landscape) {
 		height: 50dvh;

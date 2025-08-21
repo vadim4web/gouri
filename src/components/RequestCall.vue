@@ -60,7 +60,7 @@ import emailjs from '@emailjs/browser'
 
 const { locale } = useI18n()
 
-const { trigger } = inject("thankYou")
+const { trigger } = inject('thankYou')
 
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
@@ -101,7 +101,7 @@ const clearIfOnlyPrepender = event => {
 	}
 }
 
-const submitForm = async (e) => {
+const submitForm = async e => {
 	const text = `
         Lang: ${locale.value}
         Phone: ${phone.value}
@@ -121,11 +121,11 @@ const submitForm = async (e) => {
 			}
 		)
 		console.log('Email sent successfully!', response)
-		trigger("phone")
-    e.target.reset()
+		trigger('phone')
+		e.target.reset()
 	} catch (error) {
 		console.error('Error sending email:', error)
-		trigger("error")
+		trigger('error')
 	}
 }
 </script>

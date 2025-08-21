@@ -27,9 +27,10 @@ const setLocale = lang => {
 }
 
 onMounted(() => {
-	const browserLang = sessionStorage.getItem('lang')
-		? sessionStorage.getItem('lang')
-		: navigator.language || navigator.userLanguage
+	const browserLang =
+		sessionStorage.getItem('lang') ?
+			sessionStorage.getItem('lang')
+		:	navigator.language || navigator.userLanguage
 
 	if (
 		browserLang.toLowerCase().startsWith('uk') ||

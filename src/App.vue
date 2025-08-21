@@ -1,5 +1,5 @@
 <script setup>
-import { ref, provide } from "vue"
+import { ref, provide } from 'vue'
 
 import HeroSection from '~/components/HeroSection.vue'
 import ThreeBlocks from '~/components/ThreeBlocks.vue'
@@ -16,11 +16,11 @@ import ThankYou from '~/components/ThankYou.vue'
 const sentEvent = ref(null)
 
 function trigger(type) {
-  sentEvent.value = type
-  setTimeout(() => (sentEvent.value = null), 5000)
+	sentEvent.value = type
+	setTimeout(() => (sentEvent.value = null), 5000)
 }
 
-provide("thankYou", { sentEvent, trigger })
+provide('thankYou', { sentEvent, trigger })
 </script>
 
 <template>

@@ -64,7 +64,7 @@ import { ref, inject } from 'vue'
 import { useI18n } from 'vue-i18n'
 import emailjs from '@emailjs/browser'
 
-const { trigger } = inject("thankYou")
+const { trigger } = inject('thankYou')
 
 const { locale } = useI18n()
 
@@ -74,7 +74,7 @@ const USER_KEY = import.meta.env.VITE_EMAILJS_USER_KEY
 
 const email = ref('')
 
-const submitForm = async (e) => {
+const submitForm = async e => {
 	const text = `
         Lang: ${locale.value}
         Email: ${email.value}
@@ -94,11 +94,11 @@ const submitForm = async (e) => {
 			}
 		)
 		console.log('Email sent successfully!', response)
-		trigger("email")
-    e.target.reset()
+		trigger('email')
+		e.target.reset()
 	} catch (error) {
 		console.error('Error sending email:', error)
-		trigger("error")
+		trigger('error')
 	}
 }
 </script>

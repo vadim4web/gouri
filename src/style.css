@@ -46,8 +46,16 @@
 	--color-red-gray-a: #99757080;
 	/* --color-red-gray50: #cfafaf; */
 	--color-red-gray50: #b89498;
-	--form-error: linear-gradient(var(--color-coal-a), var(--color50), var(--color-coal-a));
-	--form-error: linear-gradient(var(--color-light-a), var(--color-red-gray-a), var(--color50));
+	--form-error: linear-gradient(
+		var(--color-coal-a),
+		var(--color50),
+		var(--color-coal-a)
+	);
+	--form-error: linear-gradient(
+		var(--color-light-a),
+		var(--color-red-gray-a),
+		var(--color50)
+	);
 
 	font-family: 'Montserrat', sans-serif;
 	font-optical-sizing: auto;
