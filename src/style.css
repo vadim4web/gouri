@@ -161,29 +161,18 @@ button {
 
 .angry {
 	font-family: 'Angry', sans-serif;
-	font-style: normal;
-	font-weight: normal;
-	text-rendering: optimizeLegibility;
-	font-display: swap;
 }
 
 .unbounded {
 	font-family: 'Unbounded', sans-serif;
-	font-optical-sizing: auto;
-	font-weight: normal;
-	font-style: normal;
 }
 
 .paprika {
 	font-family: 'Paprika', system-ui;
-	font-weight: 400;
-	font-style: normal;
 }
 
 .montserrat {
 	font-family: 'Montserrat', sans-serif;
-	font-optical-sizing: auto;
-	font-style: normal;
 }
 
 .seo {
