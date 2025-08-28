@@ -36,11 +36,11 @@ import RequestCall from './RequestCall.vue'
 <style lang="scss">
 .services-section {
 	@media (orientation: landscape) {
-		padding: 0 2.5rem;
+		padding: 0 2.5rem 1rem;
 	}
 
 	@media (orientation: portrait) {
-		padding: 0 1rem;
+		padding: 0 1rem 1rem;
 	}
 
 	.services {
@@ -49,11 +49,25 @@ import RequestCall from './RequestCall.vue'
 		color: white;
 
 		.service {
+			position: relative;
 			background: var(--color-dimmed);
 			display: grid;
 			border-style: solid;
 			border-width: 0 0 2px;
 			border-color: white;
+
+			transform: scale(1);
+			box-shadow: 0 0 0 transparent;
+			margin-block: 0;
+
+			transition: transform 0.5s ease, box-shadow 0.5s ease, margin 0.5s ease;
+
+			&:hover {
+				transform: scale(1.025);
+				box-shadow: 0 0 1rem var(--color-red-gray);
+				margin-block: 0.25%;
+				transition: transform 0.5s ease, box-shadow 0.5s ease, margin 0.5s ease;
+			}
 
 			img {
 				width: 1.5rem;

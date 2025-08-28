@@ -10,6 +10,8 @@
 			:dragging-distance="100"
 			:bullets="false"
 			arrows-outside
+			autoplay
+			duration="10000"
 		>
 			<template #arrow-left>
 				<svg
@@ -89,6 +91,14 @@ const { width, height } = useWindowSize()
 .vueperslide {
 	border-radius: 2.5rem;
 	padding: 2.5rem;
+	background: var(--color-dimmed);
+	filter: contrast(1) brightness(1);
+	transition: filter 0.5s ease;
+
+	&:hover {
+		filter: contrast(1.25) brightness(1.25);
+		transition: filter 0.5s ease;
+	}
 }
 
 .third {
@@ -122,7 +132,7 @@ const { width, height } = useWindowSize()
 }
 
 .third.vueperslide {
-	border: 1px solid transparent;
+	border: 1px solid var(--color);
 }
 
 .vueperslide__title {

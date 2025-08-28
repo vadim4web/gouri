@@ -73,6 +73,16 @@
 			flex-direction: column;
 			gap: 1rem;
 
+			transform: scale(1);
+			box-shadow: 0 0 0 transparent;
+			transition: transform 0.5s ease, box-shadow 0.5s ease;
+
+			&:hover {
+				transform: scale(1.025);
+				box-shadow: 0 0 1rem var(--color-red-gray);
+				transition: transform 0.5s ease, box-shadow 0.5s ease;
+			}
+
 			@media (orientation: portrait) {
 				padding: 1.5rem;
 				width: 100%;

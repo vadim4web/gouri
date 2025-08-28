@@ -1,12 +1,12 @@
 <template>
-	<section class="hero pocket">
+	<section ref="hero" class="hero pocket" :style="heroStyle">
 		<header-block v-if="width >= height" />
 		<menu-block v-else />
 
-		<div class="container">
+		<div ref="container" class="container">
 			<div class="content">
 				<h1 class="hero-headline unbounded">
-					<span class="seo"> Юридическая помощь в Польше — GOURI </span>
+					<span class="seo">Юридическая помощь в Польше — GOURI</span>
 					<span class="part1">
 						{{ $t('hero_headline1') }}
 						<span class="law">
@@ -15,13 +15,9 @@
 						{{ $t('hero_headline1__') }}
 					</span>
 					<br />
-					<span class="part2">
-						{{ $t('hero_headline2') }}
-					</span>
+					<span class="part2">{{ $t('hero_headline2') }}</span>
 				</h1>
-				<p>
-					{{ $t('hero_moto') }}
-				</p>
+				<p>{{ $t('hero_moto') }}</p>
 				<email-form />
 			</div>
 
@@ -41,13 +37,78 @@ import HeaderBlock from './HeaderBlock.vue'
 import MenuBlock from './MenuBlock.vue'
 import EmailForm from './EmailForm.vue'
 import { useWindowSize } from '@vueuse/core'
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 
 const { width, height } = useWindowSize()
+const container = ref(null)
+
+const defaultAngle = 0
+const angle = ref(defaultAngle) // current animated angle
+const targetAngle = ref(defaultAngle) // where we want to go
+
+const heroStyle = computed(() => ({
+	background: `linear-gradient(${angle.value}deg, var(--color-red-gray), #fff)`
+}))
+
+function handleMouseMove(e) {
+	if (!container.value) return
+	const rect = container.value.getBoundingClientRect()
+
+	const cx = rect.left + rect.width / 2
+	const cy = rect.top + rect.height / 2
+
+	const dx = e.clientX - cx
+	const dy = e.clientY - cy
+
+	// atan2 returns radians, rotate 90deg to align with CSS convention
+	let deg = Math.atan2(dy, dx) * (180 / Math.PI) + 90
+
+	// keep within 0-360
+	if (deg < 0) deg += 360
+
+	targetAngle.value = deg
+}
+
+function handleMouseLeave() {
+	targetAngle.value = defaultAngle
+}
+
+// --- smooth animation loop ---
+let rafId
+function animate() {
+	// interpolate angle toward target
+	const diff = targetAngle.value - angle.value
+
+	// normalize shortest rotation (avoid jumping across 360/0 boundary)
+	const shortest = ((diff + 540) % 360) - 180
+
+	// step toward target
+	angle.value += shortest * 0.1 // smoothing factor (0.1 = 10%)
+
+	rafId = requestAnimationFrame(animate)
+}
+
+onMounted(() => {
+	if (!container.value) return
+	container.value.addEventListener('mousemove', handleMouseMove)
+	container.value.addEventListener('mouseleave', handleMouseLeave)
+
+	animate() // start loop
+})
+
+onBeforeUnmount(() => {
+	if (!container.value) return
+	container.value.removeEventListener('mousemove', handleMouseMove)
+	container.value.removeEventListener('mouseleave', handleMouseLeave)
+
+	cancelAnimationFrame(rafId)
+})
 </script>
 
 <style lang="scss">
 .hero {
-	background: linear-gradient(180deg, #fff, var(--color-red-gray));
+	background: linear-gradient(0deg, var(--color-red-gray), #fff);
+	transition: background 1s ease; // smoother return
 	height: 87.5dvh;
 	position: relative;
 	display: flex;

@@ -98,6 +98,21 @@ const handleClickOutside = () => {
 
 			position: relative;
 
+			text-shadow: 0 0 0 transparent;
+			filter: drop-shadow(0 0 0 transparent);
+			transition: text-shadow 0.5s ease, filter 0.5s ease;
+
+			&:hover, &:not(.closed) {
+				text-shadow: 0 0 1rem var(--color-red-gray);
+				filter: drop-shadow(0 0 1rem var(--color-red-gray));
+				transition: text-shadow 0.5s ease, filter 0.5s ease;
+
+				img {
+					filter: drop-shadow(0 0 1rem var(--color-red-gray));
+					transition: transform 333ms, filter 0.5s ease;
+				}
+			}
+
 			&:not(:last-child) {
 				border-bottom: 1px solid transparent;
 			}
@@ -151,7 +166,7 @@ const handleClickOutside = () => {
 				position: relative;
 				top: 1rem;
 				right: 1rem;
-				transition: transform 333ms;
+				transition: transform 333ms ease, filter 0.5s ease;
 			}
 		}
 
