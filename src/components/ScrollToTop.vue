@@ -35,8 +35,7 @@ const { height } = useWindowSize()
 const visible = computed(() => y.value > 60)
 
 const progress = computed(() => {
-	const docHeight =
-		document.documentElement.scrollHeight - height.value
+	const docHeight = document.documentElement.scrollHeight - height.value
 
 	if (docHeight <= 0) return 0
 
@@ -75,9 +74,9 @@ function scrollTop() {
 	background:
 		conic-gradient(
 			var(--color) calc(var(--progress) * 1%),
-			rgba(255,255,255,0.2) 0
+			rgba(255, 255, 255, 0.2) 0
 		),
-		rgba(255,255,255,0.9);
+		rgba(255, 255, 255, 0.9);
 
 	backdrop-filter: blur(12px);
 	-webkit-backdrop-filter: blur(12px);
@@ -85,25 +84,25 @@ function scrollTop() {
 	color: white;
 
 	box-shadow:
-		0 8px 24px rgba(0,0,0,0.2),
-		inset 0 0 0 1px rgba(255,255,255,0.55);
+		0 8px 24px rgba(0, 0, 0, 0.2),
+		inset 0 0 0 1px rgba(255, 255, 255, 0.55);
 
 	transition:
-		transform .25s ease,
-		opacity .25s ease,
-		box-shadow .25s ease;
+		transform 0.25s ease,
+		opacity 0.25s ease,
+		box-shadow 0.25s ease;
 }
 
 .scroll-top:hover {
 	transform: translateY(-4px) scale(1.05);
 
 	box-shadow:
-		0 14px 32px rgba(0,0,0,0.28),
-		inset 0 0 0 1px rgba(255,255,255,0.65);
+		0 14px 32px rgba(0, 0, 0, 0.28),
+		inset 0 0 0 1px rgba(255, 255, 255, 0.65);
 }
 
 .scroll-top:active {
-	transform: translateY(0) scale(.96);
+	transform: translateY(0) scale(0.96);
 }
 
 /* Arrow */
@@ -111,9 +110,8 @@ function scrollTop() {
 	width: 2.2rem;
 	height: 2.2rem;
 
-	filter:
-		drop-shadow(0 1px 2px rgba(0,0,0,0.85))
-		drop-shadow(0 2px 6px rgba(0,0,0,0.6));
+	filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.85))
+		drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
 }
 
 /* ⭐ Tooltip premium glass */
@@ -126,10 +124,10 @@ function scrollTop() {
 	transform: translateY(-50%) scale(0.9);
 
 	padding-inline: 1.5rem;
-  height: 4rem;
+	height: 4rem;
 
-  display: inline-flex;
-  align-items: center;
+	display: inline-flex;
+	align-items: center;
 
 	border-radius: 0.85rem;
 
@@ -141,25 +139,25 @@ function scrollTop() {
 	background:
 		conic-gradient(
 			var(--color) calc(var(--progress) * 1%),
-			rgba(255,255,255,0.2) 0
+			rgba(255, 255, 255, 0.2) 0
 		),
-		rgba(255,255,255,0.9);
+		rgba(255, 255, 255, 0.9);
 
 	backdrop-filter: blur(12px);
 	-webkit-backdrop-filter: blur(12px);
 
 	color: white;
-  font-weight: bold;
-  text-transform: uppercase;
+	font-weight: bold;
+	text-transform: uppercase;
 
 	text-shadow:
-		0 0 1px rgba(0,0,0,0.85),
-		0 0 4px rgba(0,0,0,0.85),
-		0 0 7px rgba(0,0,0,0.85);
+		0 0 1px rgba(0, 0, 0, 0.85),
+		0 0 4px rgba(0, 0, 0, 0.85),
+		0 0 7px rgba(0, 0, 0, 0.85);
 
 	box-shadow:
-		0 14px 32px rgba(0,0,0,0.28),
-		inset 0 0 0 1px rgba(255,255,255,0.65);
+		0 14px 32px rgba(0, 0, 0, 0.28),
+		inset 0 0 0 1px rgba(255, 255, 255, 0.65);
 
 	opacity: 0;
 	pointer-events: none;

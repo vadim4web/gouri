@@ -4,7 +4,7 @@
 
 		<div class="footer-copy">
 			{{ $t('copyright') }} &copy; 2018 - {{ new Date().getFullYear() }}
-			{{ currentURL || 'gouri.com.pl' }}
+			<span class="address">{{ currentURL || 'gouri.com.pl' }}</span>
 		</div>
 
 		<dev-component />
@@ -46,6 +46,10 @@ const currentURL = computed(
 		flex-direction: column;
 		padding: 2.5rem 1rem;
 	}
+}
+
+.footer-copy {
+	text-transform: uppercase;
 }
 
 .footer-section .footer-logo.logo-box {

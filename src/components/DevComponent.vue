@@ -1,7 +1,7 @@
 <template>
 	<div class="dev">
 		{{ $t('developer') }}
-		<a href="https://vadim4web.github.io" target="_blank" rel="noopener"><strong>vadim4web</strong></a>
+		<a href="https://vadim4web.github.io" target="_blank" rel="noopener"><strong><em>vadim4web</em></strong></a>
 	</div>
 </template>
 
@@ -18,6 +18,10 @@
 
 	strong {
 		color: white;
+	}
+
+	em {
+		letter-spacing: 0.142857ch;
 	}
 
 	&,
