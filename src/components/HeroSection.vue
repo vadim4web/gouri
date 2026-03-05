@@ -1,6 +1,6 @@
 <template>
 	<section ref="hero" class="hero pocket" :style="heroStyle">
-		<header-block v-if="width >= height" />
+		<header-block v-if="isLandscape" />
 		<menu-block v-else />
 
 		<div ref="container" class="container">
@@ -36,10 +36,12 @@
 import HeaderBlock from './HeaderBlock.vue'
 import MenuBlock from './MenuBlock.vue'
 import EmailForm from './EmailForm.vue'
-import { useWindowSize } from '@vueuse/core'
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 
-const { width, height } = useWindowSize()
+import { useMediaQuery } from '@vueuse/core'
+
+const isLandscape = useMediaQuery('(orientation: landscape)')
+
 const container = ref(null)
 
 const defaultAngle = 0
@@ -47,7 +49,7 @@ const angle = ref(defaultAngle) // current animated angle
 const targetAngle = ref(defaultAngle) // where we want to go
 
 const heroStyle = computed(() => ({
-	background: `linear-gradient(${angle.value}deg, var(--color-red-gray), #fff)`
+	background: `linear-gradient(${angle.value}deg, var(--color-red-gray), #fff)`,
 }))
 
 function handleMouseMove(e) {

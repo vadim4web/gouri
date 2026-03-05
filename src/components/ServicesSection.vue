@@ -60,13 +60,19 @@ import RequestCall from './RequestCall.vue'
 			box-shadow: 0 0 0 transparent;
 			margin-block: 0;
 
-			transition: transform 0.5s ease, box-shadow 0.5s ease, margin 0.5s ease;
+			transition:
+				transform 0.5s ease,
+				box-shadow 0.5s ease,
+				margin 0.5s ease;
 
 			&:hover {
 				transform: scale(1.025);
 				box-shadow: 0 0 1rem var(--color-red-gray);
 				margin-block: 0.25%;
-				transition: transform 0.5s ease, box-shadow 0.5s ease, margin 0.5s ease;
+				transition:
+					transform 0.5s ease,
+					box-shadow 0.5s ease,
+					margin 0.5s ease;
 			}
 
 			img {

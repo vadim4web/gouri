@@ -23,13 +23,15 @@
 				class="point"
 				:class="index === 2 ? 'emphesize' : ''"
 			>
-				{{ $t(`about_${point}`) }}
+				{{ $t(`about_${point}`, { years }) }}
 			</span>
 		</div>
 	</section>
 </template>
 
-<script setup></script>
+<script setup>
+const years = new Date().getFullYear() - 2018
+</script>
 
 <style lang="scss">
 .about-section {

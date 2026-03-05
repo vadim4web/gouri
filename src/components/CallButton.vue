@@ -14,11 +14,15 @@
 	color: var(--color);
 	border-radius: 100vh;
 	min-width: fit-content;
-	padding: 1rem 1.75rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-inline: 1.75rem;
+	// font-size: 2rem !important;
 
-	@media (max-width: 720px) {
-		font-size: 1rem;
-	}
+	// @media (max-width: 720px) {
+	// 	font-size: 2rem !important;
+	// }
 
 	&:hover,
 	&:active {

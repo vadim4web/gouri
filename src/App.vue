@@ -2,6 +2,7 @@
 import { ref, provide } from 'vue'
 
 import HeroSection from '~/components/HeroSection.vue'
+import ScrollToTop from '~/components/ScrollToTop.vue'
 import ThreeBlocks from '~/components/ThreeBlocks.vue'
 import HeadLine from '~/components/HeadLine.vue'
 import ServicesSection from '~/components/ServicesSection.vue'
@@ -25,6 +26,7 @@ provide('thankYou', { sentEvent, trigger })
 
 <template>
 	<hero-section />
+	<scroll-to-top />
 	<three-blocks />
 	<head-line />
 	<services-section />

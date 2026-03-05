@@ -38,7 +38,8 @@
 		position: relative;
 		top: 0.125em;
 		text-transform: uppercase;
-		font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		font-family:
+			'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 		font-weight: 600;
 		letter-spacing: 0.025ch;
 		font-size: 3rem;
