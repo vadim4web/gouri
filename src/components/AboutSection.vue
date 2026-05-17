@@ -106,9 +106,6 @@ const years = new Date().getFullYear() - 2018
 			padding-left: 3.25rem;
 		}
 
-		@media (orientation: portrait) {
-		}
-
 		.emphesize {
 			font-weight: bolder;
 			display: block;
